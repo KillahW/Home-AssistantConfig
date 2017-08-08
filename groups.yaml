@@ -1,0 +1,54 @@
+default_view:
+  view: true
+  entities:
+  - group.tracker
+  - group.trackedunits
+  
+tracker:
+  entities:
+  - device_tracker.beasiphone
+  - device_tracker.samuelsnexus
+  name: Personer
+  view: false
+  
+trackedunits:
+  entities:
+  - device_tracker.ipad1
+  - device_tracker.chromecast
+  - device_tracker.galaxys6edge
+  - device_tracker.sonysmartwatch3
+  name: Enheter som är hemma och uppkopplade
+  view: false
+  
+mediadevices:
+  view: true
+  entities:
+  - media_player.libreelec_tradad
+  - media_player.libreelec_wifi
+  - media_player.openelec2
+  - media_player.pine
+  - media_player.vardagsrum
+  - media_player.yamaha_receiver
+  - script.update_library
+  name: Mediaenheter
+  
+internet:
+  view: true
+  entities:
+  - sensor.transmission_down_speed
+  - sensor.transmission_status
+  - sensor.transmission_up_speed
+  name: Internet
+  
+plexdevices:
+  view: false
+  entities:
+#  - media_player.plex_edcd297186acbe70_com_plexapp_android
+#  - media_player.plex_7kfgmaqkwbgby4oc0d65kpbj
+  
+weather:
+  view: true
+  entities:
+  - sensor.yr_symbol
+  - sun.sun
+  name: Väder

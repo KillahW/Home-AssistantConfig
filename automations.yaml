@@ -1,0 +1,34 @@
+- action:
+  - data:
+      event: Samuel_hemma
+      value1: sensor.ar_bea_hemma
+    service: ifttt.trigger
+  alias: Samuel kommer hem
+  id: '1502188318855'
+  trigger:
+  - entity_id: device_tracker.samuelsnexus
+    from: not_home
+    platform: state
+    to: home
+- action:
+  - data:
+      event: Ingen_hemma
+    service: ifttt.trigger
+  alias: Nibe ingen hemma set away
+  id: '1502188650100'
+  trigger:
+  - entity_id: device_tracker.personer
+    from: home
+    platform: state
+    to: not_home
+- action:
+  - data:
+      event: Nagon_hemma
+    service: ifttt.trigger
+  alias: Nibe hemma set home mode
+  id: '1502188791669'
+  trigger:
+  - entity_id: device_tracker.personer
+    from: not_home
+    platform: state
+    to: home
