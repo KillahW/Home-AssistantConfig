@@ -1,3 +1,4 @@
+#Samuel hemma
 - action:
   - data:
       event: Samuel_hemma
@@ -10,6 +11,7 @@
     from: not_home
     platform: state
     to: home
+#Ingen hemma    
 - action:
   - data:
       event: Ingen_hemma
@@ -21,6 +23,7 @@
     from: home
     platform: state
     to: not_home
+#Någon hemma    
 - action:
   - data:
       event: Nagon_hemma
