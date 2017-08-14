@@ -1,37 +1,31 @@
+#Views
 default_view:
   view: true
   entities:
   - group.tracker
   - group.trackedunits
-  
-tracker:
-  entities:
-  - device_tracker.beasiphone
-  - device_tracker.samuelsnexus
-  name: Personer
-  view: false
-  
-trackedunits:
-  entities:
-  - device_tracker.ipad1
-  - device_tracker.chromecast
-  - device_tracker.galaxys6edge
-  - device_tracker.sonysmartwatch3
-  name: Enheter som är hemma och uppkopplade
-  view: false
-  
-mediadevices:
+  - group.allunits
+  name: Hem
+weather:
   view: true
   entities:
-  - media_player.libreelec_tradad
-  - media_player.libreelec_wifi
-  - media_player.openelec2
-  - media_player.pine
-  - media_player.vardagsrum
-  - media_player.yamaha_receiver
-  - script.update_library
-  name: Mediaenheter
-  
+  - sensor.yr_temperature
+  - sensor.yr_symbol
+  - sun.sun
+  - sensor.yr_precipitation
+  - sensor.yr_wind_speed
+  - sensor.yr_pressure
+  - sensor.yr_wind_direction
+  - sensor.yr_humidity
+  - sensor.yr_fog
+  - sensor.yr_cloudiness
+  name: "V\xE4der"
+vmediadevices:
+  view: true
+  entities:
+  - group.grmediadevices
+  - group.scrmedia
+  name: Media
 internet:
   view: true
   entities:
@@ -39,24 +33,65 @@ internet:
   - sensor.transmission_status
   - sensor.transmission_up_speed
   name: Internet
-  
+#Groups
+tracker:
+  entities:
+  - device_tracker.beasiphone
+  - device_tracker.samuel_nexus6p
+  name: Personer
+  view: false
+trackedunits:
+  entities:
+  - device_tracker.ipad1
+  - device_tracker.chromecast
+  - device_tracker.galaxys6edge
+  - device_tracker.sonysmartwatch3
+  - device_tracker.beatricesmacbookair
+  name: "Enheter som \xE4r hemma och uppkopplade"
+  view: false
+allunits:
+  entities:
+  - device_tracker.tornberg1
+  - device_tracker.tornberg7
+  - device_tracker.beatricesmacbookair
+  - device_tracker.martin
+  - device_tracker.winserver1
+  - device_tracker.ts5400dfb6
+  - device_tracker.ilo
+  - device_tracker.rxv673
+  - device_tracker.vmserver1
+  - device_tracker.nibef730
+  - device_tracker.ubiquitiapac
+  - device_tracker.ubiquitiapacpro
+  - device_tracker.gs108ev3
+  - device_tracker.gs108tv2
+  name: "Alla enheter"
+  view: false
+grmediadevices:
+  view: false
+  entities:
+  - media_player.libreelec_tradad
+  - media_player.libreelec_wifi
+  - media_player.openelec2
+  - media_player.pine
+  - media_player.vardagsrum
+  - media_player.yamaha_receiver
+  name: Mediaenheter
+scrmedia:
+  view: false
+  entities:
+  - script.update_library
+  name: Mediascript
 plexdevices:
   view: false
   entities:
-#  - media_player.plex_edcd297186acbe70_com_plexapp_android
-#  - media_player.plex_7kfgmaqkwbgby4oc0d65kpbj
-  
-weather:
-  view: true
+ignoredinhistory:
+  view: false
   entities:
-  - sensor.yr_temperature
-  - sensor.yr_symbol
-  - sensor.yr_precipitation
-  - sensor.yr_windSpeed
-  - sensor.yr_pressure
-  - sensor.yr_windDirection
-  - sensor.yr_humidity
-  - sensor.yr_fog
-  - sensor.yr_cloudiness
-  - sun.sun
-  name: Väder
+  - media_player.yamaha_receiver_zone_2
+  - device_tracker.sonysmartwatch3
+  - group.grmediadevices
+  - group.vmediadevices
+  - group.plexdevices
+
+

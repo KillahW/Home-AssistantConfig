@@ -7,7 +7,7 @@
   alias: Samuel kommer hem
   id: '1502188318855'
   trigger:
-  - entity_id: device_tracker.samuelsnexus
+  - entity_id: device_tracker.samuel_nexus6p
     from: not_home
     platform: state
     to: home
