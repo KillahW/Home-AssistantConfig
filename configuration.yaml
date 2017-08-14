@@ -1,0 +1,157 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Hemma
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret secret_lat
+  longitude: !secret secret_long
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret secret_elev
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Stockholm
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+#logger:
+#  default: info
+#  logs:
+#    requests.packages.urllib3.connectionpool: critical
+#    #for this item anything below error will not be logged
+#    py.warnings: critical
+#did not suppressed ssl warnings
+
+http:
+  # Uncomment this to add a password (recommended!)
+   api_password: !secret api_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+   base_url: !secret ip_baseurl
+   use_x_forwarded_for: true
+   trusted_networks:
+    - 127.0.0.1
+    - !secret trustednet
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+   include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+  exclude:
+    domains:
+    - automation
+    - weblink
+    - updater
+    entities:
+    - group.ignoredinhistory
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Weather prediction
+sensor yr:
+  - platform: yr
+    monitored_conditions:
+      - temperature
+      - symbol
+      - precipitation
+      - windSpeed
+      - pressure
+      - windDirection
+      - humidity
+      - fog
+      - cloudiness
+
+# Text to speech
+tts:
+  - platform: google
+
+group: !include groups.yaml
+automation: !include automations.yaml
+sensor: !include sensors.yaml
+
+
+#Egna konfigs devicer
+
+#Kodi
+media_player kodi:
+  - platform: kodi
+    host: !secret ip_libreelec_eth
+    name: Libreelec trådad
+
+  - platform: kodi
+    host: !secret ip_libreelec_wifi
+    name: Libreelec wifi
+
+  - platform: kodi
+    host: !secret ip_openelec2
+    name: Openelec2
+
+#Plex
+media_player plex:
+  - platform: plex
+    entity_namespace: 'plex'
+    include_non_clients: true
+    scan_interval: 30
+    show_all_controls: false
+    use_custom_entity_ids: false
+    use_episode_art: false
+    
+#sensor plexactivity:
+#  - platform: plex
+#    host: !secret ip_plexserver
+#    user: !secret plex_user
+#    password: !secret plex_password
+
+#Testscript
+script: !include scripts.yaml
+
+
+#IFTTT
+ifttt:
+  key: !secret ifttt_key
+
+sensor transmission:
+  - platform: transmission
+    host: linuxserver1
+    username: !secret transmission_user
+    password: !secret transmission_password
+    monitored_variables:
+      - 'current_status'
+      - 'download_speed'
+      - 'upload_speed'
+
+device_tracker: !include device_tracker.yaml      
+
+media_player yamaharxv673:
+  - platform: yamaha
+    host: !secret ip_yamahareceiver
+    
+mqtt:
+  broker: !secret ip_mqttbroker
+  port: 1883
+#  username: !secret mqttuser
+#  password: !secret mqttpassword
+#protocol: 3.1.1
+
