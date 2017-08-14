@@ -69,20 +69,6 @@ logbook:
 # Track the sun
 sun:
 
-# Weather prediction
-sensor yr:
-  - platform: yr
-    monitored_conditions:
-      - temperature
-      - symbol
-      - precipitation
-      - windSpeed
-      - pressure
-      - windDirection
-      - humidity
-      - fog
-      - cloudiness
-
 # Text to speech
 tts:
   - platform: google
@@ -90,64 +76,15 @@ tts:
 group: !include groups.yaml
 automation: !include automations.yaml
 sensor: !include sensors.yaml
-
-
-#Egna konfigs devicer
-
-#Kodi
-media_player kodi:
-  - platform: kodi
-    host: !secret ip_libreelec_eth
-    name: Libreelec trådad
-
-  - platform: kodi
-    host: !secret ip_libreelec_wifi
-    name: Libreelec wifi
-
-  - platform: kodi
-    host: !secret ip_openelec2
-    name: Openelec2
-
-#Plex
-media_player plex:
-  - platform: plex
-    entity_namespace: 'plex'
-    include_non_clients: true
-    scan_interval: 30
-    show_all_controls: false
-    use_custom_entity_ids: false
-    use_episode_art: false
-    
-#sensor plexactivity:
-#  - platform: plex
-#    host: !secret ip_plexserver
-#    user: !secret plex_user
-#    password: !secret plex_password
-
-#Testscript
-script: !include scripts.yaml
-
+device_tracker: !include device_tracker.yaml
+script: !include scripts.yaml   
+media_player: !include media_players.yaml
 
 #IFTTT
 ifttt:
   key: !secret ifttt_key
 
-sensor transmission:
-  - platform: transmission
-    host: linuxserver1
-    username: !secret transmission_user
-    password: !secret transmission_password
-    monitored_variables:
-      - 'current_status'
-      - 'download_speed'
-      - 'upload_speed'
-
-device_tracker: !include device_tracker.yaml      
-
-media_player yamaharxv673:
-  - platform: yamaha
-    host: !secret ip_yamahareceiver
-    
+#MQTT
 mqtt:
   broker: !secret ip_mqttbroker
   port: 1883

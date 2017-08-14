@@ -1,5 +1,29 @@
+
   - platform: template
     sensors:
       ar_bea_hemma:
         value_template: '{% if is_state("device_tracker.beasiphone", "home") %} Bea är hemma! {% else %} Bea är {{ states("device_tracker.beasiphone") }} {% endif %}'
         friendly_name: Är Beatrice hemma
+# Weather prediction
+
+  - platform: yr
+    monitored_conditions:
+      - temperature
+      - symbol
+      - precipitation
+      - windSpeed
+      - pressure
+      - windDirection
+      - humidity
+      - fog
+      - cloudiness
+      
+
+  - platform: transmission
+    host: linuxserver1
+    username: !secret transmission_user
+    password: !secret transmission_password
+    monitored_variables:
+      - 'current_status'
+      - 'download_speed'
+      - 'upload_speed'

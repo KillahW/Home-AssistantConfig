@@ -1,0 +1,32 @@
+
+  - platform: kodi
+    host: !secret ip_libreelec_eth
+    name: Libreelec trådad
+
+  - platform: kodi
+    host: !secret ip_libreelec_wifi
+    name: Libreelec wifi
+
+  - platform: kodi
+    host: !secret ip_openelec2
+    name: Openelec2
+
+#Plex
+
+  - platform: plex
+    entity_namespace: 'plex'
+    include_non_clients: true
+    scan_interval: 30
+    show_all_controls: false
+    use_custom_entity_ids: false
+    use_episode_art: false
+    
+#sensor plexactivity:
+#  - platform: plex
+#    host: !secret ip_plexserver
+#    user: !secret plex_user
+#    password: !secret plex_password
+
+
+  - platform: yamaha
+    host: !secret ip_yamahareceiver

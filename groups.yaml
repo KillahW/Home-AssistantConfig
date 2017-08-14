@@ -3,9 +3,13 @@ default_view:
   view: true
   entities:
   - group.tracker
+  - group.relatives
+  name: Hem
+homenetwork:
+  view: true
+  entities:
   - group.trackedunits
   - group.allunits
-  name: Hem
 weather:
   view: true
   entities:
@@ -65,7 +69,7 @@ allunits:
   - device_tracker.ubiquitiapacpro
   - device_tracker.gs108ev3
   - device_tracker.gs108tv2
-  name: "Alla enheter"
+  name: "Fasta enheter"
   view: false
 grmediadevices:
   view: false
@@ -93,5 +97,10 @@ ignoredinhistory:
   - group.grmediadevices
   - group.vmediadevices
   - group.plexdevices
-
+relatives:
+  view: false
+  entities:
+  - device_tracker.staffansiphone
+  - device_tracker.maysiphone
+  name: "Släktingar på besök"
 

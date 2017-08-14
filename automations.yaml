@@ -8,9 +8,9 @@
   id: '1502188318855'
   trigger:
   - entity_id: device_tracker.samuel_nexus6p
-    from: not_home
+    from: 'not_home'
     platform: state
-    to: home
+    to: 'home'
 #Ingen hemma    
 - action:
   - data:
@@ -19,10 +19,10 @@
   alias: Nibe ingen hemma set away
   id: '1502188650100'
   trigger:
-  - entity_id: device_tracker.personer
-    from: home
+  - entity_id: group.tracker
+    from: 'home'
     platform: state
-    to: not_home
+    to: 'not_home'
 #Någon hemma    
 - action:
   - data:
@@ -31,7 +31,7 @@
   alias: Nibe hemma set home mode
   id: '1502188791669'
   trigger:
-  - entity_id: device_tracker.personer
-    from: not_home
+  - entity_id: group.tracker
+    from: 'not_home'
     platform: state
-    to: home
+    to: 'home'
