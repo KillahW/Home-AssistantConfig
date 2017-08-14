@@ -27,3 +27,9 @@
       - 'current_status'
       - 'download_speed'
       - 'upload_speed'
+
+  - platform: plex
+    host: !secret ip_plexserver
+    user: !secret plex_user
+    password: !secret plex_password
+    server: !secret ip_plexservername

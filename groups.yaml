@@ -10,6 +10,7 @@ homenetwork:
   entities:
   - group.trackedunits
   - group.allunits
+  name: "Nätverk"
 weather:
   view: true
   entities:
