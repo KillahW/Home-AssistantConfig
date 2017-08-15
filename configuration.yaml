@@ -73,12 +73,14 @@ sun:
 tts:
   - platform: google
 
+#Includes
 group: !include groups.yaml
 automation: !include automations.yaml
 sensor: !include sensors.yaml
-device_tracker: !include device_tracker.yaml
+device_tracker: !include device_trackers.yaml
 script: !include scripts.yaml   
 media_player: !include media_players.yaml
+notify: !include notifies.yaml
 
 #IFTTT
 ifttt:

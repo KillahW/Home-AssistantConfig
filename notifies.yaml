@@ -1,0 +1,8 @@
+  - platform: pushbullet
+    name: pushbullet
+    api_key: !secret pushbullet_api
+    
+  - platform: html5
+    name: html5google
+    gcm_api_key: !secret gcm_sender_key
+    gcm_sender_id: !secret gcm_sender_id

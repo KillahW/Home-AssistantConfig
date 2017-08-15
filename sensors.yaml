@@ -30,19 +30,19 @@
 #Plex
   - platform: plex
     host: !secret ip_plexserver
-    #List of IP addresses and networks that are allowed without auth 
-    # (IP of HASS-server)
+    #Add IP address of HASS-server to "List of IP addresses and networks that are allowed without auth" in Plex server configuration to enable user/password-less login
     # Comma separated list of IP addresses or IP/netmask entries for networks that are allowed to access Plex Media Server without logging in. When the server is signed out and this value is set, only localhost and addresses on this list will be allowed.
     #user: !secret plex_user
     #password: !secret plex_password
     server: !secret ip_plexservername
 
 #Google Geocode - https://github.com/michaelmcarthur/GoogleGeocode-HASS    
-    - platform: google_geocode
-    origin: group.tracker
-    
-    - platform: google_geocode
+  - platform: google_geocode
     origin: device_tracker.samuel_nexus6p
+    name: Samuels plats
+    gravatar: !secret gravatar_samuel
+    display_zone: show
     
-    - platform: google_geocode
+  - platform: google_geocode
     origin: device_tracker.beasiphone
+    name: Beatrice plats

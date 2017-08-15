@@ -4,6 +4,7 @@ default_view:
   entities:
   - group.tracker
   - group.relatives
+  - group.geocodeunits
   name: Hem
 homenetwork:
   view: true
@@ -72,6 +73,12 @@ allunits:
   - device_tracker.gs108ev3
   - device_tracker.gs108tv2
   name: "Fasta enheter"
+  view: false
+geocodeunits:
+  entities:
+  - sensor.samuels_plats
+  - sensor.beatrice_plats
+  name: "Plats"
   view: false
 grmediadevices:
   view: false
