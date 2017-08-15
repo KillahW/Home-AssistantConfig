@@ -30,6 +30,7 @@ vmediadevices:
   entities:
   - group.grmediadevices
   - group.scrmedia
+  - group.plexdevices
   name: Media
 internet:
   view: true
@@ -90,6 +91,10 @@ scrmedia:
 plexdevices:
   view: false
   entities:
+  - sensor.plex
+  - media_player.plex_mi_box
+  - media_player.plex_plex_web_chrome
+  name: Plex
 ignoredinhistory:
   view: false
   entities:

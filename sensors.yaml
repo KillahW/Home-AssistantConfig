@@ -4,8 +4,8 @@
       ar_bea_hemma:
         value_template: '{% if is_state("device_tracker.beasiphone", "home") %} Bea är hemma! {% else %} Bea är {{ states("device_tracker.beasiphone") }} {% endif %}'
         friendly_name: Är Beatrice hemma
-# Weather prediction
 
+# Weather prediction
   - platform: yr
     monitored_conditions:
       - temperature
@@ -18,7 +18,7 @@
       - fog
       - cloudiness
       
-
+#Transmission
   - platform: transmission
     host: linuxserver1
     username: !secret transmission_user
@@ -27,9 +27,22 @@
       - 'current_status'
       - 'download_speed'
       - 'upload_speed'
-
+#Plex
   - platform: plex
     host: !secret ip_plexserver
-    user: !secret plex_user
-    password: !secret plex_password
+    #List of IP addresses and networks that are allowed without auth 
+    # (IP of HASS-server)
+    # Comma separated list of IP addresses or IP/netmask entries for networks that are allowed to access Plex Media Server without logging in. When the server is signed out and this value is set, only localhost and addresses on this list will be allowed.
+    #user: !secret plex_user
+    #password: !secret plex_password
     server: !secret ip_plexservername
+
+#Google Geocode - https://github.com/michaelmcarthur/GoogleGeocode-HASS    
+    - platform: google_geocode
+    origin: group.tracker
+    
+    - platform: google_geocode
+    origin: device_tracker.samuel_nexus6p
+    
+    - platform: google_geocode
+    origin: device_tracker.beasiphone

@@ -1,4 +1,4 @@
-
+#Kodi
   - platform: kodi
     host: !secret ip_libreelec_eth
     name: Libreelec trådad
@@ -20,5 +20,6 @@
     use_custom_entity_ids: false
     use_episode_art: false
 
+#Yamaha Receiver
   - platform: yamaha
     host: !secret ip_yamahareceiver
