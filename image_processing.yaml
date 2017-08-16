@@ -1,0 +1,15 @@
+  - platform: microsoft_face_detect
+    source:
+      - entity_id: camera.ip_webcam
+        name: "msfacedetect"
+    attributes:
+     - age
+     - gender
+     - glasses
+      
+  - platform: microsoft_face_identify
+    group: family
+    confidence: 80
+    source:
+      - entity_id: camera.ip_webcam
+        name: "msfaceidentify"

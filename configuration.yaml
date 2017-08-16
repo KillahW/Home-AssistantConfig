@@ -81,6 +81,7 @@ device_tracker: !include device_trackers.yaml
 script: !include scripts.yaml   
 media_player: !include media_players.yaml
 notify: !include notifies.yaml
+image_processing: !include image_processing.yaml
 
 #IFTTT
 ifttt:
@@ -94,3 +95,26 @@ mqtt:
 #  password: !secret mqttpassword
 #protocol: 3.1.1
 
+android_ip_webcam:
+  - host: !secret ip_androidipwebcam
+    sensors:
+    - audio_connections
+    - battery_level
+    - battery_temp
+    - battery_voltage
+    - light
+    - motion
+    switches:
+    - exposure_lock
+    - ffc
+    - focus
+    - gps_active
+    - night_vision
+    - overlay
+    - whitebalance_lock
+    - video_recording
+    motion_sensor: true
+    
+microsoft_face:
+  api_key: !secret microsoft_face_key1
+  azure_region: westcentralus

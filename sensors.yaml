@@ -2,8 +2,14 @@
   - platform: template
     sensors:
       ar_bea_hemma:
-        value_template: '{% if is_state("device_tracker.beasiphone", "home") %} Bea är hemma! {% else %} Bea är {{ states("device_tracker.beasiphone") }} {% endif %}'
+        value_template: '{% if is_state("device_tracker.beasiphone", "home") %} {{ states("device_tracker.beasiphone") }} betyder att Bea är hemma! {% else %} {{ states("device_tracker.beasiphone") }} betyder att Bea är inte hemma! }} {% endif %}'
         friendly_name: Är Beatrice hemma
+        
+  - platform: template
+    sensors:
+      ar_samuel_hemma:
+        value_template: '{% if is_state("device_tracker.samuel_nexus6p", "home") %} Välkommen hem! {% else %} Ses sen! Aktuell plats: {{ states.sensor.samuels_plats.attributes["Formatted Address"] }} {% endif %}'
+        friendly_name: Är Samuel hemma
 
 # Weather prediction
   - platform: yr
