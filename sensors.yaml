@@ -48,6 +48,7 @@
     name: Samuels plats
     gravatar: !secret gravatar_samuel
     display_zone: show
+    options: formatted_address
     
   - platform: google_geocode
     origin: device_tracker.beasiphone
