@@ -6,6 +6,7 @@ default_view:
   - group.relatives
   - group.geocodeunits
   - group.zwavegroup
+  - group.ljus
   name: Hem
 homenetwork:
   view: true
@@ -147,4 +148,14 @@ zwavegroup:
   view: false
   entities:
   - zwave.sigma_designs_uzb_zwave_usb_adapter
-  name: Zwave-grejer
+  - zwave.nexadimmer
+  name: Zwave
+ljus:
+  view: false
+  entities:
+  - light.nexadimmer_level
+  - sensor.nexadimmer_alarm_level
+  - sensor.nexadimmer_alarm_type
+  - sensor.nexadimmer_power_management
+  - sensor.nexadimmer_sourcenodeid
+  name: Ljus
