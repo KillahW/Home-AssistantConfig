@@ -1,0 +1,6 @@
+name: "Örebro Universitet"
+latitude: !secret uni_lat
+longitude: !secret uni_long
+icon: mdi:school
+friendly_name: Universitetet
+radius: 300

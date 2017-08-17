@@ -2,6 +2,25 @@
   - platform: kodi
     host: !secret ip_libreelec_eth
     name: Libreelec trådad
+    turn_on_action:
+      service: media_player.kodi_call_method
+      data:
+        entity_id: media_player.kodi
+        method: Addons.ExecuteAddon
+        addonid: script.json-cec
+        params:
+          command: activate
+    turn_off_action:
+    - service: media_player.media_stop
+      data:
+        entity_id: media_player.kodi
+    - service: media_player.kodi_call_method
+      data:
+        entity_id: media_player.kodi
+        method: Addons.ExecuteAddon
+        addonid: script.json-cec
+        params:
+          command: standby
 
   - platform: kodi
     host: !secret ip_libreelec_wifi
@@ -10,6 +29,25 @@
   - platform: kodi
     host: !secret ip_openelec2
     name: Openelec2
+    turn_on_action:
+      service: media_player.kodi_call_method
+      data:
+        entity_id: media_player.kodi
+        method: Addons.ExecuteAddon
+        addonid: script.json-cec
+        params:
+          command: activate
+    turn_off_action:
+    - service: media_player.media_stop
+      data:
+        entity_id: media_player.kodi
+    - service: media_player.kodi_call_method
+      data:
+        entity_id: media_player.kodi
+        method: Addons.ExecuteAddon
+        addonid: script.json-cec
+        params:
+          command: standby
 
 #Plex
   - platform: plex
@@ -23,3 +61,15 @@
 #Yamaha Receiver
   - platform: yamaha
     host: !secret ip_yamahareceiver
+    source_ignore:
+      - AV1
+      - AV2
+      - AV3
+      - AV4
+      - AV5
+      - AV6
+    source_names:
+      HDMI1: "Pine"
+      HDMI2: "2"
+      HDMI3: "3"
+      HDMI4: "TV"

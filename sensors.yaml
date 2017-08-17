@@ -2,7 +2,7 @@
   - platform: template
     sensors:
       ar_bea_hemma:
-        value_template: '{% if is_state("device_tracker.beasiphone", "home") %} {{ states("device_tracker.beasiphone") }} betyder att Bea är hemma! {% else %} {{ states("device_tracker.beasiphone") }} betyder att Bea är inte hemma! }} {% endif %}'
+        value_template: '{% if is_state("device_tracker.beasiphone", "home") %} {{ states("device_tracker.beasiphone") }} betyder att Bea är hemma! {% else %} {{ states("device_tracker.beasiphone") }} betyder att Bea är inte hemma! {% endif %}'
         friendly_name: Är Beatrice hemma
         
   - platform: template
@@ -10,6 +10,12 @@
       ar_samuel_hemma:
         value_template: '{% if is_state("device_tracker.samuel_nexus6p", "home") %} Välkommen hem! {% else %} Ses sen! Aktuell plats: {{ states.sensor.samuels_plats.attributes["Formatted Address"] }} {% endif %}'
         friendly_name: Är Samuel hemma
+        
+  - platform: template
+    sensors:
+      ar_john_hemma:
+        value_template: '{% if is_state("device_tracker.tornberg1", "home") %} Johns dator är igång, så han borde vara hemma {% else %} Johns dator är avslagen, så troligtvis är han i skolan eller så sover han  {% endif %}'
+        friendly_name: Är John hemma
 
 # Weather prediction
   - platform: yr
@@ -26,7 +32,7 @@
       
 #Transmission
   - platform: transmission
-    host: linuxserver1
+    host: !secret ip_transmissionhost
     username: !secret transmission_user
     password: !secret transmission_password
     monitored_variables:

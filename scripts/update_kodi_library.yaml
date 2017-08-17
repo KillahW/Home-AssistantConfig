@@ -1,0 +1,8 @@
+update_library:
+  alias: Update Kodi Library
+  sequence:
+    - service: media_player.kodi_call_method
+      alias: Call Kodi update
+      data:
+        entity_id: media_player.kodi
+        method: VideoLibrary.Scan

@@ -1,0 +1,6 @@
+name: "Region Örebro Län"
+latitude: !secret work_lat
+longitude: !secret work_long
+radius: 250
+icon: mdi:worker
+friendly_name: "Samuels jobb"

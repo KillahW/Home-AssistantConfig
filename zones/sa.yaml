@@ -1,0 +1,6 @@
+name: "Frälsningsarmén Örebro"
+latitude: !secret sa_lat
+longitude: !secret sa_long
+icon: mdi:church
+friendly_name: Frälsningsarmén
+radius: 50

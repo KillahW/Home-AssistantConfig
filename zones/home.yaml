@@ -1,0 +1,6 @@
+name: Home
+latitude: !secret home_lat
+longitude: !secret home_long
+icon: mdi:home
+friendly_name: Hemma
+radius: 70

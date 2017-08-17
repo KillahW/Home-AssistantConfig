@@ -5,6 +5,7 @@ default_view:
   - group.tracker
   - group.relatives
   - group.geocodeunits
+  - group.zwavegroup
   name: Hem
 homenetwork:
   view: true
@@ -39,6 +40,7 @@ internet:
   - sensor.transmission_down_speed
   - sensor.transmission_status
   - sensor.transmission_up_speed
+  - switch.transmission_turtle_mode
   name: Internet
 overvakning:
   view: true
@@ -141,3 +143,8 @@ camerathings:
   - image_processing.msfacedetect
   - image_processing.msfaceidentify
   name: "Kamera"
+zwavegroup:
+  view: false
+  entities:
+  - zwave.sigma_designs_uzb_zwave_usb_adapter
+  name: Zwave-grejer
