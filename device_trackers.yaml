@@ -14,7 +14,12 @@
     hosts: !secret ip_scannedhosts
     exclude:
     - !secret ip_hassserver
+    - !secret ip_gs108ev3
     scan_options: " --privileged -sP --host-timeout 5s"
     home_interval: 10
     interval_seconds: 20
     
+  - platform: ping
+    hosts:
+      gs108ev3: !secret ip_gs108ev3
+    count: 10

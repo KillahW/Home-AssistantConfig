@@ -1,5 +1,0 @@
-
-sentence: "turn on turtle"
-action:
-  service: switch.turn_on
-  entity_id: switch.transmission_turtle_mode

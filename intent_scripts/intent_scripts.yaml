@@ -1,0 +1,25 @@
+  TurtleModeOn:
+    speech:
+      type: plain
+      text: Transmission Turtle Mode on.
+    card:
+      type: simple
+      title: Transmission card
+      content: I have turned on turtle mode. Chillax!
+    action:
+      service: switch.turn_on
+      data:
+        entity_id: switch.transmission_turtle_mode
+
+  TurtleModeOff:
+    speech:
+      type: plain
+      text: Transmission Turtle Mode off.
+    card:
+      type: simple
+      title: Transmission card
+      content: I have turned off turtle mode. Full speed ahead!
+    action:
+      service: switch.turn_off
+      data:
+        entity_id: switch.transmission_turtle_mode

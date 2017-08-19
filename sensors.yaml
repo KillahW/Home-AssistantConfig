@@ -59,3 +59,4 @@
   - platform: google_geocode
     origin: device_tracker.beasiphone
     name: Beatrice plats
+    picture: /local/bea.png

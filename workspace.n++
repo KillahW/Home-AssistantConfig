@@ -1,13 +1,25 @@
 <NotepadPlus>
     <Project name="HomeAssistant">
+        <Folder name="automations">
+            <File name="automations\presenceautomations.yaml" />
+            <File name="automations\lightautomations.yaml" />
+            <File name="automations\facedetect.yaml" />
+        </Folder>
+        <Folder name="conversations">
+            <File name="conversations\transmission.yaml" />
+        </Folder>
+        <Folder name="intent_scripts">
+            <File name="intent_scripts\intent_scripts.yaml" />
+        </Folder>
+        <Folder name="scenes">
+            <File name="scenes\lightup.yaml" />
+            <File name="scenes\mysbelysning.yaml" />
+        </Folder>
         <Folder name="scripts">
             <File name="scripts\update_kodi_library.yaml" />
         </Folder>
         <Folder name="www">
             <File name="www\bea.png" />
-        </Folder>
-        <Folder name="conversations">
-            <File name="conversations\transmissionturtle.yaml" />
         </Folder>
         <Folder name="zones">
             <File name="zones\work.yaml" />
@@ -20,7 +32,6 @@
         <File name="travis_secrets.yaml" />
         <File name="groups.yaml" />
         <File name="sensors.yaml" />
-        <File name="automations.yaml" />
         <File name="switches.yaml" />
         <File name="image_processing.yaml" />
         <File name="device_trackers.yaml" />
@@ -28,18 +39,16 @@
         <File name="plex.conf" />
         <File name="media_players.yaml" />
         <File name="notifies.yaml" />
+        <File name="switches.yaml" />
         <File name="html5_push_registrations.conf" />
         <File name="zwscene.xml" />
         <File name="zwcfg_0xc522a4e1.xml" />
         <File name="OZW_Log.txt" />
         <File name="home-assistant.log" />
-        <File name="home-assistant_v2.db" />
-        <File name="pyozw.sqlite" />
         <File name="gitupdate.sh" />
         <File name="README.md" />
         <File name=".gitignore" />
         <File name=".travis.yml" />
-        <File name=".uuid" />
         <File name=".HA_VERSION" />
         <Folder name="deps" />
         <Folder name="custom_components">
@@ -64,29 +73,6 @@
             <File name="H:\conf\dashboards\Hello.dash" />
             <File name="H:\conf\dashboards\Main.dash" />
             <File name="H:\conf\dashboards\widgets.yaml" />
-        </Folder>
-        <Folder name="compiled">
-            <Folder name="javascript">
-                <Folder name="default">
-                    <File name="H:\conf\compiled\javascript\default\hello_init.js" />
-                    <File name="H:\conf\compiled\javascript\default\main_init.js" />
-                </Folder>
-                <File name="H:\conf\compiled\javascript\application.js" />
-            </Folder>
-            <Folder name="html">
-                <Folder name="default">
-                    <File name="H:\conf\compiled\html\default\hello_head.html" />
-                    <File name="H:\conf\compiled\html\default\main_head.html" />
-                    <File name="H:\conf\compiled\html\default\main_body.html" />
-                    <File name="H:\conf\compiled\html\default\hello_body.html" />
-                </Folder>
-            </Folder>
-            <Folder name="css">
-                <Folder name="default">
-                    <File name="H:\conf\compiled\css\default\main_application.css" />
-                    <File name="H:\conf\compiled\css\default\hello_application.css" />
-                </Folder>
-            </Folder>
         </Folder>
         <File name="H:\conf\appdaemon.yaml" />
         <File name="H:\conf\secrets.yaml" />

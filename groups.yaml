@@ -5,7 +5,6 @@ default_view:
   - group.tracker
   - group.relatives
   - group.geocodeunits
-  - group.zwavegroup
   - group.ljus
   name: Hem
 homenetwork:
@@ -13,6 +12,7 @@ homenetwork:
   entities:
   - group.trackedunits
   - group.allunits
+  - group.zwavegroup
   name: "Nätverk"
 weather:
   view: true
@@ -149,13 +149,13 @@ zwavegroup:
   entities:
   - zwave.sigma_designs_uzb_zwave_usb_adapter
   - zwave.nexadimmer
+  - sensor.nexadimmer_alarm_level
+  - sensor.nexadimmer_alarm_type
+  - sensor.nexadimmer_power_management
+  - sensor.nexadimmer_sourcenodeid
   name: Zwave
 ljus:
   view: false
   entities:
   - light.nexadimmer_level
-  - sensor.nexadimmer_alarm_level
-  - sensor.nexadimmer_alarm_type
-  - sensor.nexadimmer_power_management
-  - sensor.nexadimmer_sourcenodeid
   name: Ljus

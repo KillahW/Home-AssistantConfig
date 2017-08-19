@@ -1,0 +1,15 @@
+#- 
+# - alias: "Face detect samuel"
+  # action:
+  # - data:
+    # service: notify.html5
+  # condition: []
+  # id: '1502845317455'
+  # trigger:
+  # - event_data:
+      # entity_id: camera.ip_webcam
+      # state: Samuel
+    # event_type: image_processing.msfaceidentify
+    # platform: event
+# #
+# #

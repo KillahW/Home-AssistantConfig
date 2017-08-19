@@ -1,0 +1,55 @@
+- alias: Samuel hemkomst
+  action: 
+    - data_template: 
+        message: "{{ states.sensor.ar_samuel_hemma.state }}"
+        title: "Samuels whereabouts"
+      service: notify.html5
+  id: '1502188318855'
+  trigger: 
+    platform: state
+    entity_id: 
+      - device_tracker.samuel_nexus6p
+    from: not_home
+    to: home
+  # - data_template:
+      # title: Samuels whereabouts
+      # target: email/samuel.tornberg@gmail.com
+      # message: '{{ states.sensor.ar_samuel_hemma.state }}'
+    # service: notify.pushbullet
+
+- alias: "Bea kommer hem"
+  action: 
+    - data_template: 
+        message: "{{ states.sensor.ar_bea_hemma.state }}"
+        title: "Beas whereabouts"
+      service: notify.html5
+  id: "1502794233544"
+  trigger: 
+    - platform: state
+      entity_id: device_tracker.beasiphone
+      from: not_home
+      to: home
+
+- alias: "Nibe hemma set home mode"
+  action: 
+    - data: 
+        event: Nagon_hemma
+      service: ifttt.trigger
+  id: "1502188791669"
+  trigger: 
+      platform: state
+      entity_id: group.tracker
+      from: not_home
+      to: home
+
+- alias: "Nibe ingen hemma set away"
+  action: 
+    - data: 
+        event: Ingen_hemma
+      service: ifttt.trigger
+  id: "1502188650100"
+  trigger: 
+      platform: state
+      entity_id: group.tracker
+      from: home
+      to: not_home

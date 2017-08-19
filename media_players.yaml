@@ -70,6 +70,6 @@
       - AV6
     source_names:
       HDMI1: "Pine"
-      HDMI2: "2"
-      HDMI3: "3"
+      HDMI2: "Kodi"
+      HDMI3: "Chromecast"
       HDMI4: "TV"

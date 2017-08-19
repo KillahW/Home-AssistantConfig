@@ -1,0 +1,30 @@
+- alias: "Sätt på lampa strax innan solen går ner"
+  action:
+    service: scene.turn_on
+    entity_id: scene.varde_ljus
+  id: '1334542788017'
+  trigger:
+  - platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    below: 1.5
+
+- alias: "Mysbelysning @ nautical dawn"
+  action:
+    service: scene.turn_on
+    entity_id: scene.mysbelysning
+  id: '1222160338824'
+  trigger:
+  - platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    below: -12
+
+- alias: "Stäng av lampa senast mitt i natten"
+  action:
+    service: light.turn_off
+    entity_id: light.nexadimmer_level
+  id: '1405940706141'
+  trigger:
+  - platform: time
+    at: '1:00'

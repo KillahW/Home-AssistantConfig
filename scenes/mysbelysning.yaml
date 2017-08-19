@@ -1,0 +1,5 @@
+name: Mysbelysning
+entities:
+  light.nexadimmer_level:
+    state: on
+    brightness: 40
