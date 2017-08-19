@@ -1,5 +1,0 @@
-name: Varde ljus
-entities:
-  light.nexadimmer_level:
-    state: on
-    brightness: 255

@@ -11,12 +11,10 @@
         <Folder name="intent_scripts">
             <File name="intent_scripts\intent_scripts.yaml" />
         </Folder>
-        <Folder name="scenes">
-            <File name="scenes\lightup.yaml" />
-            <File name="scenes\mysbelysning.yaml" />
-        </Folder>
+        <Folder name="scenes" />
         <Folder name="scripts">
             <File name="scripts\update_kodi_library.yaml" />
+            <File name="scripts\belysning.yaml" />
         </Folder>
         <Folder name="www">
             <File name="www\bea.png" />

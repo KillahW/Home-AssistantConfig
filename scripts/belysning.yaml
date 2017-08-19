@@ -1,0 +1,23 @@
+  VardeLjus:
+    alias: Varde ljus
+    sequence:
+      - service: light.turn_on
+        alias: Fullt ljus
+        data:
+          entity_id: light.nexadimmer_level
+          brightness: 255
+
+  Mysbelysning:
+    alias: Dimmar ner
+    sequence:
+      - service: light.turn_on
+        alias: Softish
+        data:
+          entity_id: light.nexadimmer_level
+          brightness: 40
+
+  Godnatt:
+    alias: Släcker
+    sequence:
+      light.nexadimmer_level:
+        state: off

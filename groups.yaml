@@ -7,12 +7,17 @@ default_view:
   - group.geocodeunits
   - group.ljus
   name: Hem
+braattha:
+  view: true
+  entities:
+  - group.all_scripts
+  - group.zwavegroup
+  name: Verktyg
 homenetwork:
   view: true
   entities:
   - group.trackedunits
   - group.allunits
-  - group.zwavegroup
   name: "Nätverk"
 weather:
   view: true
