@@ -10,7 +10,7 @@ default_view:
 braattha:
   view: true
   entities:
-  - group.all_scripts
+  - group.lightscripts
   - group.zwavegroup
   name: Verktyg
 homenetwork:
@@ -86,7 +86,8 @@ allunits:
   - device_tracker.gs108ev3
   - device_tracker.gs108tv2
   - device_tracker.skrivare1
-  - device_tracker.lenovotab7
+#  - device_tracker.lenovotab7
+  - device_tracker.ipadair2
   name: "Fasta enheter"
   view: false
 geocodeunits:
@@ -164,3 +165,9 @@ ljus:
   entities:
   - light.nexadimmer_level
   name: Ljus
+lightscripts:
+  view: false
+  entities:
+  - script.varde_ljus
+  - script.mysbelysning
+  - script.godnatt

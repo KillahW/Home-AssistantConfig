@@ -1,7 +1,7 @@
 - alias: "Sätt på lampa strax innan solen går ner"
   action:
-    service: scene.turn_on
-    entity_id: scene.varde_ljus
+    service: script.turn_on
+    entity_id: script.varde_ljus
   id: '1334542788017'
   trigger:
   - platform: numeric_state
@@ -11,8 +11,8 @@
 
 - alias: "Mysbelysning @ nautical dawn"
   action:
-    service: scene.turn_on
-    entity_id: scene.mysbelysning
+    service: script.turn_on
+    entity_id: script.mysbelysning
   id: '1222160338824'
   trigger:
   - platform: numeric_state
@@ -22,8 +22,8 @@
 
 - alias: "Stäng av lampa senast mitt i natten"
   action:
-    service: scene.turn_on
-    entity_id: scene.godnatt
+    service: script.turn_on
+    entity_id: script.godnatt
   id: '1405940706141'
   trigger:
   - platform: time

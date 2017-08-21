@@ -68,6 +68,12 @@
       - AV4
       - AV5
       - AV6
+      - AUDIO1
+      - AUDIO2
+      - NET RADIO
+      - Napster
+      - TUNER
+      - SERVER
     source_names:
       HDMI1: "Pine"
       HDMI2: "Kodi"
