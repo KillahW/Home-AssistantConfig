@@ -30,26 +30,49 @@
       from: not_home
       to: home
 
-- alias: "Nibe hemma set home mode"
-  action: 
-    - data: 
-        event: Nagon_hemma
-      service: ifttt.trigger
-  id: "1502188791669"
-  trigger: 
-      platform: state
-      entity_id: group.tracker
-      from: not_home
-      to: home
+# - alias: "Somebody home"
+  # action: 
+    # - data: 
+        # event: Nagon_hemma
+      # service: ifttt.trigger
+  # id: "1502188791669"
+  # trigger: 
+      # platform: state
+      # entity_id: group.tracker
+      # from: not_home
+      # to: home
 
-- alias: "Nibe ingen hemma set away"
-  action: 
-    - data: 
-        event: Ingen_hemma
+# - alias: "Nobody home"
+  # action: 
+    # - data: 
+        # event: Ingen_hemma
+      # service: ifttt.trigger
+  # id: "1502188650100"
+  # trigger: 
+      # platform: state
+      # entity_id: group.tracker
+      # from: home
+      # to: not_home
+      
+- alias: "Nobody home for a day"
+  action:
+    - data_template:
+        event: nobody_home_for_a_day
+        value1: '1'
+      #{% set adayahead = as_timestamp(now()) + 86400 %} {{ strptime(adayahead, "%Y-%m-%d %H:%M") }}
+      # {{ strftime({as_timestamp(now()) + 86400}, "%Y-%m-%d %H:%M") }}
+      # {{ as_timestamp(now()) | float + 86400}}
+      # {{ datetime.strptime(now().strftime("%Y-%m-%d %H:%M"), "%Y-%m-%d %H:%M") +  }}
+      # {{ strptime(now().timedelta(days=1).strftime("%Y-%m-%d %H:%M"), "%H:%M") + datetime.timedelta(days=10) }}
+      # {{ as_timestamp(now()) | float + 86400 | timestamp_local).strftime("%Y-%m-%d %H:%M") }}
       service: ifttt.trigger
-  id: "1502188650100"
-  trigger: 
-      platform: state
-      entity_id: group.tracker
-      from: home
-      to: not_home
+  id: "1893483420015"
+  condition: 
+    condition: state
+    entity_id: group.tracker
+    state: 'not_home'
+    for:
+      hours: 24
+  trigger:
+      platform: time
+      at: '21:00:00'

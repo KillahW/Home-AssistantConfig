@@ -2,25 +2,25 @@
   - platform: kodi
     host: !secret ip_libreelec_eth
     name: Libreelec trådad
-    turn_on_action:
-      service: media_player.kodi_call_method
-      data:
-        entity_id: media_player.kodi
-        method: Addons.ExecuteAddon
-        addonid: script.json-cec
-        params:
-          command: activate
-    turn_off_action:
-    - service: media_player.media_stop
-      data:
-        entity_id: media_player.kodi
-    - service: media_player.kodi_call_method
-      data:
-        entity_id: media_player.kodi
-        method: Addons.ExecuteAddon
-        addonid: script.json-cec
-        params:
-          command: standby
+    # turn_on_action:
+      # service: media_player.kodi_call_method
+      # data:
+        # entity_id: media_player.kodi
+        # method: Addons.ExecuteAddon
+        # addonid: script.json-cec
+        # params:
+          # command: activate
+    # turn_off_action:
+    # - service: media_player.media_stop
+      # data:
+        # entity_id: media_player.kodi
+    # - service: media_player.kodi_call_method
+      # data:
+        # entity_id: media_player.kodi
+        # method: Addons.ExecuteAddon
+        # addonid: script.json-cec
+        # params:
+          # command: standby
 
   - platform: kodi
     host: !secret ip_libreelec_wifi
@@ -29,25 +29,25 @@
   - platform: kodi
     host: !secret ip_openelec2
     name: Openelec2
-    turn_on_action:
-      service: media_player.kodi_call_method
-      data:
-        entity_id: media_player.kodi
-        method: Addons.ExecuteAddon
-        addonid: script.json-cec
-        params:
-          command: activate
-    turn_off_action:
-    - service: media_player.media_stop
-      data:
-        entity_id: media_player.kodi
-    - service: media_player.kodi_call_method
-      data:
-        entity_id: media_player.kodi
-        method: Addons.ExecuteAddon
-        addonid: script.json-cec
-        params:
-          command: standby
+    # turn_on_action:
+      # service: media_player.kodi_call_method
+      # data:
+        # entity_id: media_player.kodi
+        # method: Addons.ExecuteAddon
+        # addonid: script.json-cec
+        # params:
+          # command: activate
+    # turn_off_action:
+    # - service: media_player.media_stop
+      # data:
+        # entity_id: media_player.kodi
+    # - service: media_player.kodi_call_method
+      # data:
+        # entity_id: media_player.kodi
+        # method: Addons.ExecuteAddon
+        # addonid: script.json-cec
+        # params:
+          # command: standby
 
 #Plex
   - platform: plex
@@ -79,3 +79,5 @@
       HDMI2: "Kodi"
       HDMI3: "Chromecast"
       HDMI4: "TV"
+      HDMI5: "Oanvänd HDMI"
+      V-AUX: "HDMI framsidan"

@@ -4,6 +4,7 @@
             <File name="automations\presenceautomations.yaml" />
             <File name="automations\lightautomations.yaml" />
             <File name="automations\facedetect.yaml" />
+            <File name="automations\system.yaml" />
         </Folder>
         <Folder name="conversations">
             <File name="conversations\transmission.yaml" />

@@ -25,3 +25,5 @@ html5_push_registrations.conf
 ip_bans.yaml
 /icloud/*
 gitupdate.sh
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal

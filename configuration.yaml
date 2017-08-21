@@ -74,6 +74,11 @@ updater:
 # Discover some devices automatically
 discovery:
 
+# Testing stuff
+zeroconf:
+# upnp:
+  # port_mapping: true
+
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation: !include_dir_named conversations/
 conversation: !include_dir_merge_list conversations/
