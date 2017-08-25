@@ -102,6 +102,11 @@ sun:
 # Text to speech
 tts:
   - platform: google
+    cache: True
+    cache_dir: tts
+    language: sv
+    time_memory: 300
+
 
 #Includes
 scene: !include_dir_list scenes/

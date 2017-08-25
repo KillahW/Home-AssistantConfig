@@ -3,13 +3,13 @@
     username: !secret unifi_user
     password: !secret unifi_password
     verify_ssl: false
-    interval_seconds: 10
+    interval_seconds: 30
     consider_home: 180
     track_new_devices: yes
-    
+
   - platform: owntracks
     max_gps_accuracy: 200
-    
+
   - platform: nmap_tracker
     hosts: !secret ip_scannedhosts
     exclude:
@@ -18,7 +18,9 @@
     scan_options: " --privileged -sP --host-timeout 5s"
     home_interval: 10
     interval_seconds: 20
-    
+    consider_home: 180
+    track_new_devices: yes
+
   - platform: ping
     hosts:
       gs108ev3: !secret ip_gs108ev3

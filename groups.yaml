@@ -18,20 +18,13 @@ homenetwork:
   entities:
   - group.trackedunits
   - group.allunits
+  - group.computer_stuff
   name: "Nätverk"
 weather:
   view: true
   entities:
-  - sensor.yr_temperature
-  - sensor.yr_symbol
-  - sun.sun
-  - sensor.yr_precipitation
-  - sensor.yr_wind_speed
-  - sensor.yr_pressure
-  - sensor.yr_wind_direction
-  - sensor.yr_humidity
-  - sensor.yr_fog
-  - sensor.yr_cloudiness
+  - group.sungroup
+  - group.yrgroup
  # - attributes.sun.sun.elevation
   name: "V\xE4der"
 vmediadevices:
@@ -44,13 +37,7 @@ vmediadevices:
 internet:
   view: true
   entities:
-  - sensor.transmission_down_speed
-  - sensor.transmission_status
-  - sensor.transmission_up_speed
-  - switch.transmission_turtle_mode
-  - sensor.speedtest_download
-  - sensor.speedtest_ping
-  - sensor.speedtest_upload
+  - group.transmissiongroup
   name: Internet
 overvakning:
   view: true
@@ -175,3 +162,34 @@ lightscripts:
   - script.varde_ljus
   - script.mysbelysning
   - script.godnatt
+computer_stuff:
+  view: false
+  entities:
+  - sensor.ssl_certificate_expiry
+  name: Datorgrejer
+transmissiongroup:
+  view: false
+  entities:
+  - sensor.transmission_down_speed
+  - sensor.transmission_status
+  - sensor.transmission_up_speed
+  - switch.transmission_turtle_mode
+  name: Transmission
+sungroup:
+  view: false
+  entities:
+  - sun.sun
+  name: Solen
+yrgroup:
+  view: false
+  entities:
+  - sensor.yr_temperature
+  - sensor.yr_symbol
+  - sensor.yr_precipitation
+  - sensor.yr_wind_speed
+  - sensor.yr_pressure
+  - sensor.yr_wind_direction
+  - sensor.yr_humidity
+  - sensor.yr_fog
+  - sensor.yr_cloudiness
+  name: Väder från yr.no

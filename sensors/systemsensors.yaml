@@ -3,8 +3,8 @@
     username: !secret ilo_user
     password: !secret ilo_password
     monitored_variables:
-      - name: Serverhälsa
-        sensor_type: server_health
+      # - name: Serverhälsa
+        # sensor_type: server_health
       - name: Tid sedan start
         sensor_type: server_power_on_time
 
