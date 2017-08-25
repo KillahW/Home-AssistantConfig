@@ -162,6 +162,7 @@ lightscripts:
   - script.varde_ljus
   - script.mysbelysning
   - script.godnatt
+  name: Ljusscenarion
 computer_stuff:
   view: false
   entities:

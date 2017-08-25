@@ -1,4 +1,5 @@
   varde_ljus:
+    alias: Sätt på fullt ljus
     sequence:
       - service: light.turn_on
         alias: Fullt ljus
@@ -7,6 +8,7 @@
           brightness: 255
 
   mysbelysning:
+    alias: Mysbelysning
     sequence:
       - service: light.turn_on
         alias: Softish
@@ -15,6 +17,7 @@
           brightness: 40
 
   godnatt:
+    alias: Släck ljus
     sequence:
       - service: light.turn_off
         alias: Släcker
