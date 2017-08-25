@@ -13,6 +13,11 @@
             <File name="intent_scripts\intent_scripts.yaml" />
         </Folder>
         <Folder name="scenes" />
+        <Folder name="sensors">
+            <File name="sensors\sensors.yaml" />
+            <File name="sensors\presencemodify.yaml" />
+            <File name="sensors\systemsensors.yaml" />
+        </Folder>
         <Folder name="scripts">
             <File name="scripts\update_kodi_library.yaml" />
             <File name="scripts\belysning.yaml" />
@@ -30,7 +35,6 @@
         <File name="secrets.yaml" />
         <File name="travis_secrets.yaml" />
         <File name="groups.yaml" />
-        <File name="sensors.yaml" />
         <File name="switches.yaml" />
         <File name="image_processing.yaml" />
         <File name="device_trackers.yaml" />

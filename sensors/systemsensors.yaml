@@ -1,0 +1,22 @@
+  - platform: hp_ilo
+    host: !secret ip_hpilo
+    username: !secret ilo_user
+    password: !secret ilo_password
+    monitored_variables:
+      - name: Serverhälsa
+        sensor_type: server_health
+      - name: Tid sedan start
+        sensor_type: server_power_on_time
+
+  - platform: cert_expiry
+    host: !secret ip_externalalias
+
+#Transmission
+  - platform: transmission
+    host: !secret ip_transmissionhost
+    username: !secret transmission_user
+    password: !secret transmission_password
+    monitored_variables:
+      - 'current_status'
+      - 'download_speed'
+      - 'upload_speed'

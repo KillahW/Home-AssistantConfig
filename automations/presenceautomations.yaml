@@ -58,13 +58,7 @@
   action:
     - data_template:
         event: nobody_home_for_a_day
-        value1: '1'
-      #{% set adayahead = as_timestamp(now()) + 86400 %} {{ strptime(adayahead, "%Y-%m-%d %H:%M") }}
-      # {{ strftime({as_timestamp(now()) + 86400}, "%Y-%m-%d %H:%M") }}
-      # {{ as_timestamp(now()) | float + 86400}}
-      # {{ datetime.strptime(now().strftime("%Y-%m-%d %H:%M"), "%Y-%m-%d %H:%M") +  }}
-      # {{ strptime(now().timedelta(days=1).strftime("%Y-%m-%d %H:%M"), "%H:%M") + datetime.timedelta(days=10) }}
-      # {{ as_timestamp(now()) | float + 86400 | timestamp_local).strftime("%Y-%m-%d %H:%M") }}
+        value1: "{{ (as_timestamp(now()) + (24*3600)) | timestamp_custom('%Y-%m-%d %H:%M') }}"
       service: ifttt.trigger
   id: "1893483420015"
   condition: 

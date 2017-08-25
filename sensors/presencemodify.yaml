@@ -1,0 +1,31 @@
+
+  - platform: template
+    sensors:
+      ar_bea_hemma:
+        value_template: '{% if is_state("device_tracker.beasiphone", "home") %} Bea är hemma! {% else %} Bea är inte hemma! {% endif %}'
+        friendly_name: Är Beatrice hemma
+        
+  - platform: template
+    sensors:
+      ar_samuel_hemma:
+        value_template: '{% if is_state("device_tracker.samuel_nexus6p", "home") %} Hemma {% else %} Aktuell plats: {{ states.sensor.samuels_plats.attributes["Formatted Address"] }} {% endif %}'
+        friendly_name: Är Samuel hemma
+        
+  - platform: template
+    sensors:
+      ar_john_hemma:
+        value_template: '{% if is_state("device_tracker.tornberg1", "home") %} Johns dator är igång, så han borde vara hemma {% else %} Johns dator är avslagen, så troligtvis är han i skolan eller så sover han  {% endif %}'
+        friendly_name: Är John hemma
+
+#Google Geocode - https://github.com/michaelmcarthur/GoogleGeocode-HASS    
+  - platform: google_geocode
+    origin: device_tracker.samuel_nexus6p
+    name: Samuels plats
+    gravatar: !secret gravatar_samuel
+    display_zone: show
+    options: street, city
+    
+  - platform: google_geocode
+    origin: device_tracker.beasiphone
+    name: Beatrice plats
+    picture: /local/bea.png

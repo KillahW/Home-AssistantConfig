@@ -32,6 +32,7 @@ weather:
   - sensor.yr_humidity
   - sensor.yr_fog
   - sensor.yr_cloudiness
+ # - attributes.sun.sun.elevation
   name: "V\xE4der"
 vmediadevices:
   view: true
@@ -47,6 +48,9 @@ internet:
   - sensor.transmission_status
   - sensor.transmission_up_speed
   - switch.transmission_turtle_mode
+  - sensor.speedtest_download
+  - sensor.speedtest_ping
+  - sensor.speedtest_upload
   name: Internet
 overvakning:
   view: true
