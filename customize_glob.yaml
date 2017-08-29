@@ -1,0 +1,15 @@
+  light.*:
+    custom_ui_state_card: custom-ui
+    state_card_mode: break-slider
+    stretch_slider: true
+    hide_control: false
+    show_last_changed: false
+    confirm_controls_show_lock: false
+    slider_theme:
+      min: 10
+      max: 255
+      pin: true
+      off_when_min: false
+      report_when_not_changed: false
+  cover.*:
+    custom_ui_state_card: custom-ui

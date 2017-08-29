@@ -146,10 +146,10 @@ zwavegroup:
   entities:
   - zwave.sigma_designs_uzb_zwave_usb_adapter
   - zwave.nexadimmer
-  - sensor.nexadimmer_alarm_level
-  - sensor.nexadimmer_alarm_type
-  - sensor.nexadimmer_power_management
-  - sensor.nexadimmer_sourcenodeid
+  # - sensor.nexadimmer_alarm_level
+  # - sensor.nexadimmer_alarm_type
+  # - sensor.nexadimmer_power_management
+  # - sensor.nexadimmer_sourcenodeid
   name: Zwave
 ljus:
   view: false
@@ -167,6 +167,7 @@ computer_stuff:
   view: false
   entities:
   - sensor.ssl_certificate_expiry
+  - sensor.ilo_uptime
   name: Datorgrejer
 transmissiongroup:
   view: false
@@ -180,6 +181,8 @@ sungroup:
   view: false
   entities:
   - sun.sun
+  - sensor.sunrise_time
+  - sensor.sunset_time
   name: Solen
 yrgroup:
   view: false

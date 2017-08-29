@@ -1,0 +1,13 @@
+  # light.nexadimmer_level:
+    # #extra_data_template: "{power_consumption!=10}W"
+    # extra_badge:
+      # entity_id: sensor.nexadimmer_power_management
+      # attribute: value
+      # unit: W
+      # blacklist_states: 0
+  sensor.sunset_time:
+      friendly_name: "Solen går ner"
+      icon: mdi:weather-sunset-down
+  sensor.sunrise_time:
+      friendly_name: "Solen går upp"
+      icon: mdi:weather-sunset-up
