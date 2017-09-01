@@ -2,11 +2,18 @@
 default_view:
   view: true
   entities:
-  - group.tracker
   - group.relatives
-  - group.geocodeunits
   - group.ljus
   name: Hem
+kalender:
+  view: true
+  entities:
+  - group.familjgroup
+  - group.samuelgroup
+  - group.beatricegroup
+  - group.johngroup
+  - group.relatives
+  name: Kalender
 braattha:
   view: true
   entities:
@@ -197,3 +204,44 @@ yrgroup:
   - sensor.yr_fog
   - sensor.yr_cloudiness
   name: Väder från yr.no
+johngroup:
+  view: false
+  entities:
+  - sensor.ar_john_hemma
+  - sensor.event_title_john
+  - sensor.event_description_john
+  - sensor.event_allday_john
+  - sensor.event_start_john
+  - sensor.event_end_john
+  name: John
+samuelgroup:
+  view: false
+  entities:
+  - sensor.ar_samuel_hemma
+  - device_tracker.samuel_nexus6p
+  - sensor.event_title_samuel
+  - sensor.event_description_samuel
+  - sensor.event_allday_samuel
+  - sensor.event_start_samuel
+  - sensor.event_end_samuel
+  name: Samuel
+beatricegroup:
+  view: false
+  entities:
+  - sensor.ar_beatrice_hemma
+  - device_tracker.beasiphone
+  - sensor.event_title_beatrice
+  - sensor.event_description_beatrice
+  - sensor.event_allday_beatrice
+  - sensor.event_start_beatrice
+  - sensor.event_end_beatrice
+  name: Beatrice
+familjgroup:
+  view: false
+  entities:
+  - sensor.event_title_tornbergs
+  - sensor.event_description_tornbergs
+  - sensor.event_allday_tornbergs
+  - sensor.event_start_tornbergs
+  - sensor.event_end_tornbergs
+  name: Familjen

@@ -1,0 +1,67 @@
+
+- cal_id: samuel.tornberg@gmail.com
+  entities:
+  - device_id: samueltornberggmailcom
+    name: samuel.tornberg@gmail.com
+    track: true
+
+- cal_id: kljet4t8jgursqtqrphge7i2ro@group.calendar.google.com
+  entities:
+  - device_id: tornbergs
+    name: "T\xF6rnbergs"
+    track: true
+  - device_id: johnsaktiviteter
+    name: "Johns aktiviteter"
+    search: "John"
+    track: true
+  - device_id: louisesaktiviteter
+    name: "Louise aktiviteter"
+    search: "Louise"
+    track: true
+  - device_id: samuelsaktiviteter
+    name: "Samuels aktiviteter"
+    search: "Samuel"
+    track: true
+  - device_id: beatricesaktiviteter
+    name: "Beatrice aktiviteter"
+    search: "Beatrice"
+    track: true
+  - device_id: elsasaktiviteter
+    name: "Elsas aktiviteter"
+    search: "Elsa"
+    track: true
+  - device_id: gabrielsaktiviteter
+    name: "Gabriels aktiviteter"
+    search: "Gabriel"
+    track: true
+
+- cal_id: 8bf8hag2qjv62pqjqh204ij5q3jg97tq@import.calendar.google.com
+  entities:
+  - device_id: webcalcallagetsemosjo_p0708ics
+    # name: webcal://cal.laget.se/MOSJO_P07-08.ics
+    name: "Mosjö SK P07-08"
+    track: true
+
+- cal_id: buocv9l10g0l18376q8mlauqdc@group.calendar.google.com
+  entities:
+  - device_id: musikkaren
+    name: "Musikk\xE5ren"
+    track: true
+
+- cal_id: '#contacts@group.v.calendar.google.com'
+  entities:
+  - device_id: contacts
+    name: Contacts
+    track: true
+
+- cal_id: sv.swedish#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: helgdagar_i_sverige
+    name: Helgdagar i Sverige
+    track: true
+
+- cal_id: p#weather@group.v.calendar.google.com
+  entities:
+  - device_id: weather_osterhofen
+    name: 'Weather: Osterhofen'
+    track: true

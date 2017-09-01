@@ -45,6 +45,7 @@
         <File name="switches.yaml" />
         <File name="customize.yaml" />
         <File name="customize_glob.yaml" />
+        <File name="google_calendars.yaml" />
         <File name="html5_push_registrations.conf" />
         <File name="zwscene.xml" />
         <File name="zwcfg_0xc522a4e1.xml" />
