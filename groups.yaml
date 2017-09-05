@@ -13,6 +13,9 @@ kalender:
   - group.beatricegroup
   - group.johngroup
   - group.relatives
+  - group.louisegroup
+  - group.elsagroup
+  - group.gabrielgroup
   name: Kalender
 braattha:
   view: true
@@ -208,12 +211,17 @@ johngroup:
   view: false
   entities:
   - sensor.ar_john_hemma
+  - group.johnkalender
+  name: John
+johnkalender:
+  view: false
+  entities:
   - sensor.event_title_john
   - sensor.event_description_john
   - sensor.event_allday_john
   - sensor.event_start_john
   - sensor.event_end_john
-  name: John
+  name: Johns nästa aktivitet
 samuelgroup:
   view: false
   entities:
@@ -224,6 +232,7 @@ samuelgroup:
   - sensor.event_allday_samuel
   - sensor.event_start_samuel
   - sensor.event_end_samuel
+  - sensor.template_calendar_samuel
   name: Samuel
 beatricegroup:
   view: false
@@ -245,3 +254,33 @@ familjgroup:
   - sensor.event_start_tornbergs
   - sensor.event_end_tornbergs
   name: Familjen
+louisegroup:
+  view: false
+  entities:
+  #- sensor.ar_louise_hemma
+  - sensor.event_title_louise
+  - sensor.event_description_louise
+  - sensor.event_allday_louise
+  - sensor.event_start_louise
+  - sensor.event_end_louise
+  name: Louise
+elsagroup:
+  view: false
+  entities:
+  #- sensor.ar_elsa_hemma
+  - sensor.event_title_elsa
+  - sensor.event_description_elsa
+  - sensor.event_allday_elsa
+  - sensor.event_start_elsa
+  - sensor.event_end_elsa
+  name: Elsa
+gabrielgroup:
+  view: false
+  entities:
+  #- sensor.ar_gabriel_hemma
+  - sensor.event_title_gabriel
+  - sensor.event_description_gabriel
+  - sensor.event_allday_gabriel
+  - sensor.event_start_gabriel
+  - sensor.event_end_gabriel
+  name: Gabriel

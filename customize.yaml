@@ -11,3 +11,4 @@
   sensor.sunrise_time:
       friendly_name: "Solen går upp"
       icon: mdi:weather-sunset-up
+  

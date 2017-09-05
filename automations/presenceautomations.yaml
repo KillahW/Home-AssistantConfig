@@ -20,7 +20,7 @@
 - alias: "Bea kommer hem"
   action: 
     - data_template: 
-        message: "{{ states.sensor.ar_bea_hemma.state }}"
+        message: "{{ states.sensor.ar_beatrice_hemma.state }}"
         title: "Beas whereabouts"
       service: notify.html5
   id: "1502794233544"

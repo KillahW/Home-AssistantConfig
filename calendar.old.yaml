@@ -1,0 +1,153 @@
+# - platform: template
+  # sensors:
+    # event_title_samuel:
+      # friendly_name: 'Nästa händelse Samuel'
+      # value_template: "{{ states.calendar.samuelsaktiviteter.attributes.message }}"
+    
+    # event_description_samuel:
+       # friendly_name: 'Beskrivning Samuel'
+       # value_template: "{{ states.calendar.samuelsaktiviteter.attributes.description }}"
+
+    # event_allday_samuel:
+       # friendly_name: 'Hela dagen? Samuel'
+       # value_template: "{{ states.calendar.samuelsaktiviteter.attributes.all_day }}"
+
+    # event_start_samuel:
+       # friendly_name: 'Startar Samuel'
+       # value_template: "{{ states.calendar.samuelsaktiviteter.attributes.start_time }}"
+
+    # event_end_samuel:
+       # friendly_name: 'Slutar Samuel'
+       # value_template: "{{ states.calendar.samuelsaktiviteter.attributes.end_time }}"
+       
+# - platform: template
+  # sensors:
+    # event_title_john:
+      # friendly_name: 'Nästa händelse'
+      # value_template: "{{ states.calendar.johnsaktiviteter.attributes.message }}"
+    
+    # event_description_john:
+       # friendly_name: 'Beskrivning'
+       # value_template: "{{ states.calendar.johnsaktiviteter.attributes.description }}"
+
+    # event_allday_john:
+       # friendly_name: 'Hela dagen?'
+       # value_template: "{{ states.calendar.johnsaktiviteter.attributes.all_day }}"
+
+    # event_start_john:
+       # friendly_name: 'Startar'
+       # value_template: "{{ states.calendar.johnsaktiviteter.attributes.start_time }}"
+
+    # event_end_john:
+       # friendly_name: 'Slutar'
+       # value_template: "{{ states.calendar.johnsaktiviteter.attributes.end_time }}"
+       
+# - platform: template
+  # sensors:
+    # event_title_beatrice:
+      # friendly_name: 'Nästa händelse'
+      # value_template: "{{ states.calendar.beatricesaktiviteter.attributes.message }}"
+    
+    # event_description_beatrice:
+       # friendly_name: 'Beskrivning'
+       # value_template: "{{ states.calendar.beatricesaktiviteter.attributes.description }}"
+
+    # event_allday_beatrice:
+       # friendly_name: 'Hela dagen?'
+       # value_template: "{{ states.calendar.beatricesaktiviteter.attributes.all_day }}"
+
+    # event_start_beatrice:
+       # friendly_name: 'Startar'
+       # value_template: "{{ states.calendar.beatricesaktiviteter.attributes.start_time }}"
+
+    # event_end_beatrice:
+       # friendly_name: 'Slutar'
+       # value_template: "{{ states.calendar.beatricesaktiviteter.attributes.end_time }}"
+       
+# - platform: template
+  # sensors:
+    # event_title_louise:
+      # friendly_name: 'Nästa händelse'
+      # value_template: "{{ states.calendar.louisesaktiviteter.attributes.message }}"
+    
+    # event_description_louise:
+       # friendly_name: 'Beskrivning'
+       # value_template: "{{ states.calendar.louisesaktiviteter.attributes.description }}"
+
+    # event_allday_louise:
+       # friendly_name: 'Hela dagen?'
+       # value_template: "{{ states.calendar.louisesaktiviteter.attributes.all_day }}"
+
+    # event_start_louise:
+       # friendly_name: 'Startar'
+       # value_template: "{{ states.calendar.louisesaktiviteter.attributes.start_time }}"
+
+    # event_end_louise:
+       # friendly_name: 'Slutar'
+       # value_template: "{{ states.calendar.louisesaktiviteter.attributes.end_time }}"
+       
+# - platform: template
+  # sensors:
+    # event_title_elsa:
+      # friendly_name: 'Nästa händelse'
+      # value_template: "{{ states.calendar.elsasaktiviteter.attributes.message }}"
+    
+    # event_description_elsa:
+       # friendly_name: 'Beskrivning'
+       # value_template: "{{ states.calendar.elsasaktiviteter.attributes.description }}"
+
+    # event_allday_elsa:
+       # friendly_name: 'Hela dagen?'
+       # value_template: "{{ states.calendar.elsasaktiviteter.attributes.all_day }}"
+
+    # event_start_elsa:
+       # friendly_name: 'Startar'
+       # value_template: "{{ states.calendar.elsasaktiviteter.attributes.start_time }}"
+
+    # event_end_elsa:
+       # friendly_name: 'Slutar'
+       # value_template: "{{ states.calendar.elsasaktiviteter.attributes.end_time }}"
+       
+# - platform: template
+  # sensors:
+    # event_title_gabriel:
+      # friendly_name: 'Nästa händelse'
+      # value_template: "{{ states.calendar.gabrielsaktiviteter.attributes.message }}"
+
+    # event_description_gabriel:
+       # friendly_name: 'Beskrivning'
+       # value_template: "{{ states.calendar.gabrielsaktiviteter.attributes.description }}"
+
+    # event_allday_gabriel:
+       # friendly_name: 'Hela dagen?'
+       # value_template: "{{ states.calendar.gabrielsaktiviteter.attributes.all_day }}"
+
+    # event_start_gabriel:
+       # friendly_name: 'Startar'
+       # value_template: "{{ states.calendar.gabrielsaktiviteter.attributes.start_time }}"
+
+    # event_end_gabriel:
+       # friendly_name: 'Slutar'
+       # value_template: "{{ states.calendar.gabrielsaktiviteter.attributes.end_time }}"
+
+# - platform: template
+  # sensors:
+    # event_title_tornbergs:
+      # friendly_name: 'Nästa händelse'
+      # value_template: "{{ states.calendar.tornbergs.attributes.message }}"
+    
+    # event_description_tornbergs:
+       # friendly_name: 'Beskrivning'
+       # value_template: "{{ states.calendar.tornbergs.attributes.description }}"
+
+    # event_allday_tornbergs:
+       # friendly_name: 'Hela dagen?'
+       # value_template: "{{ states.calendar.tornbergs.attributes.all_day }}"
+
+    # event_start_tornbergs:
+       # friendly_name: 'Startar'
+       # value_template: "{{ states.calendar.tornbergs.attributes.start_time }}"
+
+    # event_end_tornbergs:
+       # friendly_name: 'Slutar'
+       # value_template: "{{ states.calendar.tornbergs.attributes.end_time }}"
