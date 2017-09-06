@@ -10,7 +10,7 @@ homeassistant:
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Stockholm
-  
+
   customize: !include customize.yaml
   customize_glob: !include customize_glob.yaml
 
@@ -132,19 +132,24 @@ mqtt:
     # - whitebalance_lock
     # - video_recording
     # motion_sensor: true
-    
+
 # microsoft_face:
   # api_key: !secret microsoft_face_key1
   # azure_region: westcentralus
-  
+
 zwave:
   usb_path: /dev/ttyS2
   network_key: !secret zwave_networkkey
   autoheal: false
-  
+
 #hdmi_cec:
 # does not work well
 
 google:
   client_id: !secret google_client_id
   client_secret: !secret google_client_secret
+
+panel_iframe:
+  googlecalendar:
+    title: Familjens kalender
+    url: !secret googlecalendarurl

@@ -51,7 +51,7 @@ internet:
   name: Internet
 overvakning:
   view: true
-  entities:  
+  entities:
   - group.camerathings
   name: "Övervakning"
 #Groups
@@ -89,6 +89,7 @@ allunits:
   - device_tracker.skrivare1
 #  - device_tracker.lenovotab7
   - device_tracker.ipadair2
+  - device_tracker.xboxone
   name: "Fasta enheter"
   view: false
 geocodeunits:
@@ -177,7 +178,7 @@ computer_stuff:
   view: false
   entities:
   - sensor.ssl_certificate_expiry
-  - sensor.ilo_uptime
+#  - sensor.ilo_uptime
   name: Datorgrejer
 transmissiongroup:
   view: false
@@ -211,7 +212,8 @@ johngroup:
   view: false
   entities:
   - sensor.ar_john_hemma
-  - group.johnkalender
+#  - group.johnkalender
+  - sensor.template_calendar_john
   name: John
 johnkalender:
   view: false
@@ -227,11 +229,11 @@ samuelgroup:
   entities:
   - sensor.ar_samuel_hemma
   - device_tracker.samuel_nexus6p
-  - sensor.event_title_samuel
-  - sensor.event_description_samuel
-  - sensor.event_allday_samuel
-  - sensor.event_start_samuel
-  - sensor.event_end_samuel
+  # - sensor.event_title_samuel
+  # - sensor.event_description_samuel
+  # - sensor.event_allday_samuel
+  # - sensor.event_start_samuel
+  # - sensor.event_end_samuel
   - sensor.template_calendar_samuel
   name: Samuel
 beatricegroup:
@@ -239,48 +241,53 @@ beatricegroup:
   entities:
   - sensor.ar_beatrice_hemma
   - device_tracker.beasiphone
-  - sensor.event_title_beatrice
-  - sensor.event_description_beatrice
-  - sensor.event_allday_beatrice
-  - sensor.event_start_beatrice
-  - sensor.event_end_beatrice
+  # - sensor.event_title_beatrice
+  # - sensor.event_description_beatrice
+  # - sensor.event_allday_beatrice
+  # - sensor.event_start_beatrice
+  # - sensor.event_end_beatrice
+  - sensor.template_calendar_beatrice
   name: Beatrice
 familjgroup:
   view: false
   entities:
-  - sensor.event_title_tornbergs
-  - sensor.event_description_tornbergs
-  - sensor.event_allday_tornbergs
-  - sensor.event_start_tornbergs
-  - sensor.event_end_tornbergs
+  # - sensor.event_title_tornbergs
+  # - sensor.event_description_tornbergs
+  # - sensor.event_allday_tornbergs
+  # - sensor.event_start_tornbergs
+  # - sensor.event_end_tornbergs
+    - sensor.template_calendar_tornberg
   name: Familjen
 louisegroup:
   view: false
   entities:
   #- sensor.ar_louise_hemma
-  - sensor.event_title_louise
-  - sensor.event_description_louise
-  - sensor.event_allday_louise
-  - sensor.event_start_louise
-  - sensor.event_end_louise
+  # - sensor.event_title_louise
+  # - sensor.event_description_louise
+  # - sensor.event_allday_louise
+  # - sensor.event_start_louise
+  # - sensor.event_end_louise
+    - sensor.template_calendar_louise
   name: Louise
 elsagroup:
   view: false
   entities:
   #- sensor.ar_elsa_hemma
-  - sensor.event_title_elsa
-  - sensor.event_description_elsa
-  - sensor.event_allday_elsa
-  - sensor.event_start_elsa
-  - sensor.event_end_elsa
+  # - sensor.event_title_elsa
+  # - sensor.event_description_elsa
+  # - sensor.event_allday_elsa
+  # - sensor.event_start_elsa
+  # - sensor.event_end_elsa
+    - sensor.template_calendar_elsa
   name: Elsa
 gabrielgroup:
   view: false
   entities:
   #- sensor.ar_gabriel_hemma
-  - sensor.event_title_gabriel
-  - sensor.event_description_gabriel
-  - sensor.event_allday_gabriel
-  - sensor.event_start_gabriel
-  - sensor.event_end_gabriel
+  # - sensor.event_title_gabriel
+  # - sensor.event_description_gabriel
+  # - sensor.event_allday_gabriel
+  # - sensor.event_start_gabriel
+  # - sensor.event_end_gabriel
+    - sensor.template_calendar_gabriel
   name: Gabriel

@@ -6,7 +6,7 @@
         {{ states.calendar.samuelsaktiviteter.attributes.message }}
       friendly_name: Samuels nästa aktivitet
       unit_of_measurement: ''
-      
+
 - platform: template
   sensors:
     template_calendar_beatrice:
@@ -15,7 +15,7 @@
         {{ states.calendar.beatricesaktiviteter.attributes.message }}
       friendly_name: Beatrice nästa aktivitet
       unit_of_measurement: ''
-      
+
 - platform: template
   sensors:
     template_calendar_john:
@@ -24,7 +24,7 @@
         {{ states.calendar.johnsaktiviteter.attributes.message }}
       friendly_name: Johns nästa aktivitet
       unit_of_measurement: ''
-      
+
 - platform: template
   sensors:
     template_calendar_louise:
@@ -33,7 +33,7 @@
         {{ states.calendar.louisesaktiviteter.attributes.message }}
       friendly_name: Louise nästa aktivitet
       unit_of_measurement: ''
-      
+
 - platform: template
   sensors:
     template_calendar_elsa:
@@ -42,7 +42,7 @@
         {{ states.calendar.elsasaktiviteter.attributes.message }}
       friendly_name: Elsas nästa aktivitet
       unit_of_measurement: ''
-      
+
 - platform: template
   sensors:
     template_calendar_gabriel:
@@ -51,12 +51,12 @@
         {{ states.calendar.gabrielsaktiviteter.attributes.message }}
       friendly_name: Gabriels nästa aktivitet
       unit_of_measurement: ''
-      
+
 - platform: template
   sensors:
     template_calendar_tornberg:
       value_template: >
         {{ strptime(states.calendar.tornbergs.attributes.start_time, "%Y-%m-%d %H:%M:%S") }}
         {{ states.calendar.tornbergs.attributes.message }}
-      friendly_name: tornberg nästa aktivitet
+      friendly_name: Nästa aktivitet oavsett familjemedlem
       unit_of_measurement: ''
