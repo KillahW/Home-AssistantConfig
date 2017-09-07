@@ -1,59 +1,59 @@
-- alias: Samuel hemkomst
-  action: 
-    - data_template: 
-        message: "{{ states.sensor.ar_samuel_hemma.state }}"
-        title: "Samuels whereabouts"
-      service: notify.html5
-  id: '1502188318855'
-  trigger: 
-    platform: state
-    entity_id: 
-      - device_tracker.samuel_nexus6p
-    from: not_home
-    to: home
-  # - data_template:
-      # title: Samuels whereabouts
-      # target: email/samuel.tornberg@gmail.com
-      # message: '{{ states.sensor.ar_samuel_hemma.state }}'
-    # service: notify.pushbullet
+# - alias: Samuel hemkomst
+#   action:
+#     - data_template:
+#         message: "{{ states.sensor.ar_samuel_hemma.state }}"
+#         title: "Samuels whereabouts"
+#       service: notify.html5
+#   id: '1502188318855'
+#   trigger:
+#     platform: state
+#     entity_id:
+#       - device_tracker.samuel_nexus6p
+#     from: not_home
+#     to: home
+#   # - data_template:
+#       # title: Samuels whereabouts
+#       # target: email/samuel.tornberg@gmail.com
+#       # message: '{{ states.sensor.ar_samuel_hemma.state }}'
+#     # service: notify.pushbullet
 
-- alias: "Bea kommer hem"
-  action: 
-    - data_template: 
-        message: "{{ states.sensor.ar_beatrice_hemma.state }}"
-        title: "Beas whereabouts"
-      service: notify.html5
-  id: "1502794233544"
-  trigger: 
-    - platform: state
-      entity_id: device_tracker.beasiphone
-      from: not_home
-      to: home
+# - alias: "Bea kommer hem"
+#   action:
+#     - data_template:
+#         message: "{{ states.sensor.ar_beatrice_hemma.state }}"
+#         title: "Beas whereabouts"
+#       service: notify.html5
+#   id: "1502794233544"
+#   trigger:
+#     - platform: state
+#       entity_id: device_tracker.beasiphone
+#       from: not_home
+#       to: home
 
 # - alias: "Somebody home"
-  # action: 
-    # - data: 
+  # action:
+    # - data:
         # event: Nagon_hemma
       # service: ifttt.trigger
   # id: "1502188791669"
-  # trigger: 
+  # trigger:
       # platform: state
       # entity_id: group.tracker
       # from: not_home
       # to: home
 
 # - alias: "Nobody home"
-  # action: 
-    # - data: 
+  # action:
+    # - data:
         # event: Ingen_hemma
       # service: ifttt.trigger
   # id: "1502188650100"
-  # trigger: 
+  # trigger:
       # platform: state
       # entity_id: group.tracker
       # from: home
       # to: not_home
-      
+
 - alias: "Nobody home for a day"
   action:
     - data_template:
@@ -61,7 +61,7 @@
         value1: "{{ (as_timestamp(now()) + (24*3600)) | timestamp_custom('%Y-%m-%d %H:%M') }}"
       service: ifttt.trigger
   id: "1893483420015"
-  condition: 
+  condition:
     condition: state
     entity_id: group.tracker
     state: 'not_home'
