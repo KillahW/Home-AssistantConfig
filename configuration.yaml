@@ -107,11 +107,14 @@ ifttt:
 
 #MQTT
 mqtt:
+  # without config it uses the internal mqtt broker
   broker: !secret ip_mqttbroker
   port: 1883
-#  username: !secret mqttuser
-#  password: !secret mqttpassword
-#protocol: 3.1.1
+  client_id: mosquitto
+  keepalive: 60
+  # username: !secret mqttuser
+  #  password: !secret mqttpassword
+  #protocol: 3.1.1
 
 # android_ip_webcam:
   # - host: !secret ip_androidipwebcam

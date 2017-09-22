@@ -2,20 +2,21 @@
 default_view:
   view: true
   entities:
-  - group.relatives
   - group.ljus
   name: Hem
 kalender:
   view: true
   entities:
-  - group.familjgroup
-  - group.samuelgroup
-  - group.beatricegroup
-  - group.johngroup
-  - group.relatives
-  - group.louisegroup
-  - group.elsagroup
-  - group.gabrielgroup
+  # - group.familjgroup
+  # - group.samuelgroup
+  # - group.beatricegroup
+  # - group.johngroup
+  # - group.relatives
+  # - group.louisegroup
+  # - group.elsagroup
+  # - group.gabrielgroup
+    - group.nastaaktivitet
+    - group.var
   name: Kalender
 braattha:
   view: true
@@ -53,6 +54,7 @@ overvakning:
   view: true
   entities:
   - group.camerathings
+  - group.relatives
   name: "Övervakning"
 #Groups
 tracker:
@@ -228,7 +230,7 @@ samuelgroup:
   view: false
   entities:
   - sensor.ar_samuel_hemma
-  - device_tracker.samuel_nexus6p
+  # - device_tracker.samuel_nexus6p
   # - sensor.event_title_samuel
   # - sensor.event_description_samuel
   # - sensor.event_allday_samuel
@@ -240,7 +242,7 @@ beatricegroup:
   view: false
   entities:
   - sensor.ar_beatrice_hemma
-  - device_tracker.beasiphone
+  # - device_tracker.beasiphone
   # - sensor.event_title_beatrice
   # - sensor.event_description_beatrice
   # - sensor.event_allday_beatrice
@@ -291,3 +293,21 @@ gabrielgroup:
   # - sensor.event_end_gabriel
     - sensor.template_calendar_gabriel
   name: Gabriel
+nastaaktivitet:
+  view: false
+  entities:
+    - sensor.template_calendar_samuel
+    - sensor.template_calendar_beatrice
+    - sensor.template_calendar_john
+    - sensor.template_calendar_louise
+    - sensor.template_calendar_elsa
+    - sensor.template_calendar_gabriel
+    - sensor.template_calendar_tornberg
+  name: "Nästa aktivitet"
+var:
+  view: false
+  entities:
+    - sensor.ar_samuel_hemma
+    - sensor.ar_beatrice_hemma
+    - sensor.ar_john_hemma
+    - sensor.samuel_hemifran_till_jobbet

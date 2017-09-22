@@ -47,8 +47,10 @@
   sensors:
     template_calendar_gabriel:
       value_template: >
+        {% if is_state("states.calendar.gabrielsaktiviteter.attributes.start_time", "null") %} Ingen händelse den närmaste tiden {% else %}
         {{ strptime(states.calendar.gabrielsaktiviteter.attributes.start_time, "%Y-%m-%d %H:%M:%S") }}
         {{ states.calendar.gabrielsaktiviteter.attributes.message }}
+        {% endif %}
       friendly_name: Gabriels nästa aktivitet
       unit_of_measurement: ''
 
