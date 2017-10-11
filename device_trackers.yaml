@@ -7,7 +7,9 @@
     consider_home: 180
     track_new_devices: yes
 
-  - platform: owntracks
+  # - platform: owntracks
+  #   max_gps_accuracy: 200
+  - platform: owntracks_http
     max_gps_accuracy: 200
 
   - platform: nmap_tracker

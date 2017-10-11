@@ -106,12 +106,12 @@ ifttt:
   key: !secret ifttt_key
 
 #MQTT
-mqtt:
-  # without config it uses the internal mqtt broker
-  broker: !secret ip_mqttbroker
-  port: 1883
-  client_id: mosquitto
-  keepalive: 60
+# mqtt:
+#   # without config it uses the internal mqtt broker
+#   broker: !secret ip_mqttbroker
+#   port: 1883
+#   client_id: mosquitto
+#   keepalive: 60
   # username: !secret mqttuser
   #  password: !secret mqttpassword
   #protocol: 3.1.1
