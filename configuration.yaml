@@ -30,7 +30,7 @@ config:
 #    #for this item anything below error will not be logged
 #    py.warnings: critical
 #did not suppressed ssl warnings
-
+#
 http:
   # Uncomment this to add a password (recommended!)
    api_password: !secret api_password
@@ -87,7 +87,7 @@ tts:
     time_memory: 300
 
 
-#Includes
+# Includes
 scene: !include_dir_list scenes/
 group: !include groups.yaml
 automation: !include_dir_merge_list automations/
