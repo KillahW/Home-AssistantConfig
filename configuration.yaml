@@ -156,3 +156,12 @@ panel_iframe:
   googlecalendar:
     title: Familjens kalender
     url: !secret googlecalendarurl
+
+google_assistant:
+  project_id: someproject-2d0b8
+  client_id: !secret ga_client_id
+  access_token: !secret ga_access_token
+  exposed_domains:
+    - switch
+    - light
+    - group
