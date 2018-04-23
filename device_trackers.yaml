@@ -29,5 +29,5 @@
     count: 10
 
   - platform: google_maps
-    username: !secret googlesvcacc
-    password: !secret googlesvcaccpass
+    username: !secret googlesvcacc_user
+    password: !secret googlesvcacc_password

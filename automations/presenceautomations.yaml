@@ -8,7 +8,7 @@
 #   trigger:
 #     platform: state
 #     entity_id:
-#       - device_tracker.samuel_mobil
+#       - device_tracker.google_maps_114901048958323475377
 #     from: not_home
 #     to: home
 #   # - data_template:
@@ -54,7 +54,7 @@
       # from: home
       # to: not_home
 
-# Disabled to not cause troubles 
+# Disabled to not cause troubles
 # - alias: "Nobody home for a day"
   # action:
     # - data_template:
