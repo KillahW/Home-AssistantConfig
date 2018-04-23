@@ -8,7 +8,7 @@
 #   trigger:
 #     platform: state
 #     entity_id:
-#       - device_tracker.samuel_nexus6p
+#       - device_tracker.samuel_mobil
 #     from: not_home
 #     to: home
 #   # - data_template:
@@ -54,19 +54,20 @@
       # from: home
       # to: not_home
 
-- alias: "Nobody home for a day"
-  action:
-    - data_template:
-        event: nobody_home_for_a_day
-        value1: "{{ (as_timestamp(now()) + (24*3600)) | timestamp_custom('%Y-%m-%d %H:%M') }}"
-      service: ifttt.trigger
-  id: "1893483420015"
-  condition:
-    condition: state
-    entity_id: group.tracker
-    state: 'not_home'
-    for:
-      hours: 24
-  trigger:
-      platform: time
-      at: '21:00:00'
+# Disabled to not cause troubles 
+# - alias: "Nobody home for a day"
+  # action:
+    # - data_template:
+        # event: nobody_home_for_a_day
+        # value1: "{{ (as_timestamp(now()) + (24*3600)) | timestamp_custom('%Y-%m-%d %H:%M') }}"
+      # service: ifttt.trigger
+  # id: "1893483420015"
+  # condition:
+    # condition: state
+    # entity_id: group.tracker
+    # state: 'not_home'
+    # for:
+      # hours: 24
+  # trigger:
+      # platform: time
+      # at: '21:00:00'

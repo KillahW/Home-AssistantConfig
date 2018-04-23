@@ -1,0 +1,32 @@
+sensor.nexadimmer_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528065
+light.nexadimmer_level:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076299265
+sensor.nexadimmer_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528081
+sensor.nexadimmer_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528097
+sensor.nexadimmer_power_management:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528241
+media_player.vardagsrum:
+  name:
+  platform: cast
+  unique_id: 372d057e-baab-914c-93ca-6bdc730f16a8
+media_player.htc_u11_life:
+  name:
+  platform: plex
+  unique_id: f81b9af4994e1f10-com-plexapp-android
+media_player.plex_web_chrome:
+  name:
+  platform: plex
+  unique_id: 7gb8mksbp4swmv4wd5eh3o8q

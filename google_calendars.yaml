@@ -65,3 +65,9 @@
   - device_id: weather_osterhofen
     name: 'Weather: Osterhofen'
     track: true
+
+- cal_id: rvus6c8d29t634h2j7u2i9odg16o28q6@import.calendar.google.com
+  entities:
+  - device_id: webcalcallagetsemikblaics
+    name: webcal://cal.laget.se/MIKBla.ics
+    track: true

@@ -60,7 +60,7 @@ overvakning:
 tracker:
   entities:
   - device_tracker.beasiphone
-  - device_tracker.samuel_nexus6p
+  - device_tracker.samuel_mobil
   name: Personer
   view: false
 trackedunits:
@@ -230,14 +230,14 @@ samuelgroup:
   view: false
   entities:
   - sensor.ar_samuel_hemma
-  # - device_tracker.samuel_nexus6p
+  # - device_tracker.samuel_mobil
   # - sensor.event_title_samuel
   # - sensor.event_description_samuel
   # - sensor.event_allday_samuel
   # - sensor.event_start_samuel
   # - sensor.event_end_samuel
   - sensor.template_calendar_samuel
-  name: Samuel
+  name: Samuels grejer
 beatricegroup:
   view: false
   entities:
