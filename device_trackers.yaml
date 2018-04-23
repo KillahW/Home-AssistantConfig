@@ -9,8 +9,8 @@
 
   # - platform: owntracks
   #   max_gps_accuracy: 200
-  - platform: owntracks_http
-    max_gps_accuracy: 200
+  #- platform: owntracks_http
+  #  max_gps_accuracy: 200
 
   - platform: nmap_tracker
     hosts: !secret ip_scannedhosts
@@ -27,3 +27,7 @@
     hosts:
       gs108ev3: !secret ip_gs108ev3
     count: 10
+
+  - platform: google_maps
+    username: !secret googlesvcacc
+    password: !secret googlesvcaccpass
