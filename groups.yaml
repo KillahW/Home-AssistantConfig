@@ -310,4 +310,5 @@ var:
     - sensor.ar_samuel_hemma
     - sensor.ar_beatrice_hemma
     - sensor.ar_john_hemma
+    - sensor.ar_hemmatelefonen_hemma
     - sensor.samuel_hemifran_till_jobbet
