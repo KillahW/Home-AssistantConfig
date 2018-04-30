@@ -12,21 +12,21 @@
   #- platform: owntracks_http
   #  max_gps_accuracy: 200
 
-  - platform: nmap_tracker
-    hosts: !secret ip_scannedhosts
-    exclude:
-    - !secret ip_hassserver
-    - !secret ip_gs108ev3
-    scan_options: " --privileged -F --host-timeout 5s"
-    home_interval: 10
-#    interval_seconds: 30
-#    consider_home: 90
-    track_new_devices: yes
-
-  - platform: ping
-    hosts:
-      gs108ev3: !secret ip_gs108ev3
-    count: 10
+#   - platform: nmap_tracker
+#     hosts: !secret ip_scannedhosts
+#     exclude:
+#     - !secret ip_hassserver
+#     - !secret ip_gs108ev3
+#     scan_options: " --privileged -F --host-timeout 5s"
+#     home_interval: 10
+# #    interval_seconds: 30
+# #    consider_home: 90
+#     track_new_devices: yes
+#
+#   - platform: ping
+#     hosts:
+#       gs108ev3: !secret ip_gs108ev3
+#     count: 10
 
   - platform: google_maps
     username: !secret googlesvcacc_user

@@ -30,3 +30,7 @@ media_player.plex_web_chrome:
   name:
   platform: plex
   unique_id: 7gb8mksbp4swmv4wd5eh3o8q
+media_player.plex_plex_web_chrome:
+  name:
+  platform: plex
+  unique_id: cdgmw3dz6ux7yae75e5tkaj9
