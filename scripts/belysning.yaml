@@ -4,7 +4,7 @@
       - service: light.turn_on
         alias: Fullt ljus
         data:
-          entity_id: light.nexadimmer_level
+          entity_id: group.ljus_vardagsrum
           brightness: 255
 
   mysbelysning:
@@ -13,7 +13,7 @@
       - service: light.turn_on
         alias: Softish
         data:
-          entity_id: light.nexadimmer_level
+          entity_id: group.ljus_vardagsrum
           brightness: 40
 
   godnatt:
@@ -22,4 +22,4 @@
       - service: light.turn_off
         alias: Släcker
         data:
-          entity_id: light.nexadimmer_level
+          entity_id: group.ljus_vardagsrum

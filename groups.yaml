@@ -164,11 +164,12 @@ zwavegroup:
   # - sensor.nexadimmer_power_management
   # - sensor.nexadimmer_sourcenodeid
   name: Zwave
-ljus:
+ljus_vardagsrum:
   view: false
   entities:
   - light.nexadimmer_level
-  name: Ljus
+  - light.vardagsrum_hoger
+  name: Ljus i vardagsrummet
 lightscripts:
   view: false
   entities:
@@ -309,6 +310,6 @@ var:
   entities:
     - sensor.ar_samuel_hemma
     - sensor.ar_beatrice_hemma
-    - sensor.ar_john_hemma
-    - sensor.ar_hemmatelefonen_hemma
+#    - sensor.ar_john_hemma
+#    - sensor.ar_hemmatelefonen_hemma
     - sensor.samuel_hemifran_till_jobbet

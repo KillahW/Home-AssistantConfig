@@ -34,3 +34,15 @@ media_player.plex_plex_web_chrome:
   name:
   platform: plex
   unique_id: cdgmw3dz6ux7yae75e5tkaj9
+zwave.sigma_designs_uzb_zwave_usb_adapter:
+  name:
+  platform: zwave
+  unique_id: node-1
+light.vardagsrum_hoger:
+  name:
+  platform: tradfri
+  unique_id: light-7e226152044000d1-65537
+light.tradfri_group:
+  name:
+  platform: tradfri
+  unique_id: group-7e226152044000d1-131073

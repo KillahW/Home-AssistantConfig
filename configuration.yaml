@@ -165,3 +165,19 @@ google_assistant:
     - switch
     - light
     - group
+
+#Enables a map showing the location of tracked devices
+map:
+
+# Cloud
+cloud:
+
+#Homekit
+homekit:
+  auto_start: False
+  filter:
+    include_domains:
+      - alarm_control_panel
+      - light
+#    exclude_entities:
+#      - light.kitchen_light
