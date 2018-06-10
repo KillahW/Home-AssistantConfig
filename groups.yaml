@@ -15,6 +15,7 @@ braattha:
   entities:
   - group.lightscripts
   - group.zwavegroup
+  - group.ljus_vardagsrum
   name: Verktyg
 homenetwork:
   view: true
@@ -192,4 +193,5 @@ var:
 #    - sensor.ar_john_hemma
 #    - sensor.ar_hemmatelefonen_hemma
     - sensor.samuel_hemifran_till_jobbet
+    - device_tracker.google_maps_114901048958323475377
   name: "Var är vi"
