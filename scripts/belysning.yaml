@@ -22,4 +22,4 @@
       - service: light.turn_off
         alias: Släcker
         data:
-          entity_id: group.ljus_vardagsrum
+          entity_id: group.all_lights

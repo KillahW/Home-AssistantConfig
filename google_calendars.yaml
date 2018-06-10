@@ -35,13 +35,6 @@
     search: "Gabriel"
     track: true
 
-- cal_id: 8bf8hag2qjv62pqjqh204ij5q3jg97tq@import.calendar.google.com
-  entities:
-  - device_id: webcalcallagetsemosjo_p0708ics
-    # name: webcal://cal.laget.se/MOSJO_P07-08.ics
-    name: "Mosjö SK P07-08"
-    track: true
-
 - cal_id: buocv9l10g0l18376q8mlauqdc@group.calendar.google.com
   entities:
   - device_id: musikkaren
@@ -64,7 +57,7 @@
   entities:
   - device_id: weather_osterhofen
     name: 'Weather: Osterhofen'
-    track: true
+    track: false
 
 - cal_id: rvus6c8d29t634h2j7u2i9odg16o28q6@import.calendar.google.com
   entities:

@@ -7,14 +7,6 @@ default_view:
 kalender:
   view: true
   entities:
-  # - group.familjgroup
-  # - group.samuelgroup
-  # - group.beatricegroup
-  # - group.johngroup
-  # - group.relatives
-  # - group.louisegroup
-  # - group.elsagroup
-  # - group.gabrielgroup
     - group.nastaaktivitet
     - group.var
   name: Kalender
@@ -50,12 +42,12 @@ internet:
   entities:
   - group.transmissiongroup
   name: Internet
-overvakning:
-  view: true
-  entities:
-  - group.camerathings
-  - group.relatives
-  name: "Övervakning"
+# overvakning:
+#   view: true
+#   entities:
+#   - group.camerathings
+#   - group.relatives
+#   name: "Övervakning"
 #Groups
 tracker:
   entities:
@@ -63,33 +55,13 @@ tracker:
   - device_tracker.google_maps_114901048958323475377
   name: Personer
   view: false
-trackedunits:
-  entities:
-  - device_tracker.ipad1
-  - device_tracker.chromecast
-  - device_tracker.galaxys6edge
-  - device_tracker.sonysmartwatch3
-  - device_tracker.beatricesmacbookair
-  name: "Enheter som \xE4r hemma och uppkopplade"
-  view: false
 allunits:
   entities:
   - device_tracker.tornberg1
   - device_tracker.tornberg7
-  - device_tracker.beatricesmacbookair
   - device_tracker.martin
   - device_tracker.winserver1
-  - device_tracker.ts5400dfb6
-  - device_tracker.ilo
-  - device_tracker.rxv673
-  - device_tracker.vmserver1
-  - device_tracker.nibef730
-  - device_tracker.ubiquitiapac
-  - device_tracker.ubiquitiapacpro
-  - device_tracker.gs108ev3
-  - device_tracker.gs108tv2
   - device_tracker.skrivare1
-#  - device_tracker.lenovotab7
   - device_tracker.ipadair2
   - device_tracker.xboxone
   name: "Fasta enheter"
@@ -103,10 +75,6 @@ geocodeunits:
 grmediadevices:
   view: false
   entities:
-  - media_player.libreelec_tradad
-  - media_player.libreelec_wifi
-  - media_player.openelec2
-  - media_player.pine
   - media_player.vardagsrum
   - media_player.yamaha_receiver
   name: Mediaenheter
@@ -115,45 +83,38 @@ scrmedia:
   entities:
   - script.update_library
   name: Mediascript
-plexdevices:
-  view: false
-  entities:
-  - sensor.plex
-  - media_player.plex_mi_box
-  - media_player.plex_plex_web_chrome
-  name: Plex
-ignoredinhistory:
-  view: false
-  entities:
-  - media_player.yamaha_receiver_zone_2
-  - device_tracker.sonysmartwatch3
-  - group.grmediadevices
-  - group.vmediadevices
-  - group.plexdevices
-relatives:
-  view: false
-  entities:
-  - device_tracker.staffansiphone
-  - device_tracker.maysiphone
-  name: "Släktingar på besök"
-camerathings:
-  view: false
-  entities:
-  - camera.ip_webcam
-  - sensor.ip_webcam_audio_connections
-  - sensor.ip_webcam_battery_level
-  - sensor.ip_webcam_battery_temperature
-  - sensor.ip_webcam_battery_voltage
-  - sensor.ip_webcam_motion
-  - switch.ip_webcam_focus
-  - switch.ip_webcam_frontfacing_camera
-  - switch.ip_webcam_gps_active
-  - switch.ip_webcam_night_vision
-  - switch.ip_webcam_video_recording
-  - switch.ip_webcam_white_balance_lock
-  - image_processing.msfacedetect
-  - image_processing.msfaceidentify
-  name: "Kamera"
+# ignoredinhistory:
+#   view: false
+#   entities:
+#   - media_player.yamaha_receiver_zone_2
+#   - device_tracker.sonysmartwatch3
+#   - group.grmediadevices
+#   - group.vmediadevices
+#   - group.plexdevices
+# relatives:
+#   view: false
+#   entities:
+#   - device_tracker.staffansiphone
+#   - device_tracker.maysiphone
+#   name: "Släktingar på besök"
+# camerathings:
+#   view: false
+#   entities:
+#   - camera.ip_webcam
+#   - sensor.ip_webcam_audio_connections
+#   - sensor.ip_webcam_battery_level
+#   - sensor.ip_webcam_battery_temperature
+#   - sensor.ip_webcam_battery_voltage
+#   - sensor.ip_webcam_motion
+#   - switch.ip_webcam_focus
+#   - switch.ip_webcam_frontfacing_camera
+#   - switch.ip_webcam_gps_active
+#   - switch.ip_webcam_night_vision
+#   - switch.ip_webcam_video_recording
+#   - switch.ip_webcam_white_balance_lock
+#   - image_processing.msfacedetect
+#   - image_processing.msfaceidentify
+#   name: "Kamera"
 zwavegroup:
   view: false
   entities:
@@ -211,89 +172,7 @@ yrgroup:
   - sensor.yr_fog
   - sensor.yr_cloudiness
   name: Väder från yr.no
-johngroup:
-  view: false
-  entities:
-  - sensor.ar_john_hemma
-#  - group.johnkalender
-  - sensor.template_calendar_john
-  name: John
-johnkalender:
-  view: false
-  entities:
-  - sensor.event_title_john
-  - sensor.event_description_john
-  - sensor.event_allday_john
-  - sensor.event_start_john
-  - sensor.event_end_john
-  name: Johns nästa aktivitet
-samuelgroup:
-  view: false
-  entities:
-  - sensor.ar_samuel_hemma
-  # - device_tracker.google_maps_114901048958323475377
-  # - sensor.event_title_samuel
-  # - sensor.event_description_samuel
-  # - sensor.event_allday_samuel
-  # - sensor.event_start_samuel
-  # - sensor.event_end_samuel
-  - sensor.template_calendar_samuel
-  name: Samuels grejer
-beatricegroup:
-  view: false
-  entities:
-  - sensor.ar_beatrice_hemma
-  # - device_tracker.beasiphone
-  # - sensor.event_title_beatrice
-  # - sensor.event_description_beatrice
-  # - sensor.event_allday_beatrice
-  # - sensor.event_start_beatrice
-  # - sensor.event_end_beatrice
-  - sensor.template_calendar_beatrice
-  name: Beatrice
-familjgroup:
-  view: false
-  entities:
-  # - sensor.event_title_tornbergs
-  # - sensor.event_description_tornbergs
-  # - sensor.event_allday_tornbergs
-  # - sensor.event_start_tornbergs
-  # - sensor.event_end_tornbergs
-    - sensor.template_calendar_tornberg
-  name: Familjen
-louisegroup:
-  view: false
-  entities:
-  #- sensor.ar_louise_hemma
-  # - sensor.event_title_louise
-  # - sensor.event_description_louise
-  # - sensor.event_allday_louise
-  # - sensor.event_start_louise
-  # - sensor.event_end_louise
-    - sensor.template_calendar_louise
-  name: Louise
-elsagroup:
-  view: false
-  entities:
-  #- sensor.ar_elsa_hemma
-  # - sensor.event_title_elsa
-  # - sensor.event_description_elsa
-  # - sensor.event_allday_elsa
-  # - sensor.event_start_elsa
-  # - sensor.event_end_elsa
-    - sensor.template_calendar_elsa
-  name: Elsa
-gabrielgroup:
-  view: false
-  entities:
-  #- sensor.ar_gabriel_hemma
-  # - sensor.event_title_gabriel
-  # - sensor.event_description_gabriel
-  # - sensor.event_allday_gabriel
-  # - sensor.event_start_gabriel
-  # - sensor.event_end_gabriel
-    - sensor.template_calendar_gabriel
-  name: Gabriel
+
 nastaaktivitet:
   view: false
   entities:
@@ -313,3 +192,4 @@ var:
 #    - sensor.ar_john_hemma
 #    - sensor.ar_hemmatelefonen_hemma
     - sensor.samuel_hemifran_till_jobbet
+  name: "Var är vi"
