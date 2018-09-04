@@ -75,7 +75,7 @@
       - TUNER
       - SERVER
     source_names:
-      HDMI1: "Pine"
+      HDMI1: "RetroPie"
       HDMI2: "Kodi"
       HDMI3: "Chromecast"
       HDMI4: "TV"

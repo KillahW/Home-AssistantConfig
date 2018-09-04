@@ -37,6 +37,7 @@ http:
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
    base_url: !secret ip_baseurl
    use_x_forwarded_for: true
+   trusted_proxies: !secret ip_trustedproxy
    trusted_networks:
     - 127.0.0.1
     - !secret trustednet

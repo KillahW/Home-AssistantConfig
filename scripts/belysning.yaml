@@ -1,20 +1,22 @@
   varde_ljus:
-    alias: Sätt på fullt ljus
+    alias: Sätt på ljus
     sequence:
       - service: light.turn_on
-        alias: Fullt ljus
+        alias: Mjukt ljus
         data:
           entity_id: group.ljus_vardagsrum
-          brightness: 255
+          brightness: 160
+          color_name: goldenrod
 
   mysbelysning:
     alias: Mysbelysning
     sequence:
       - service: light.turn_on
-        alias: Softish
+        alias: Mys
         data:
           entity_id: group.ljus_vardagsrum
-          brightness: 40
+          brightness: 10
+          color_name: darkred
 
   godnatt:
     alias: Släck ljus

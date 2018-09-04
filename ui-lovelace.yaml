@@ -1,0 +1,80 @@
+title: Vdv 247
+# Include external resources
+resources:
+  - url: /local/my-custom-card.js
+    type: js
+  - url: /local/my-webfont.css
+    type: css
+
+# Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
+# background: center / cover no-repeat url("/background.png") fixed
+
+# Exclude entities from "Unused entities" view
+#excluded_entities:
+#  - weblink.router
+
+views:
+    # View tab title.
+  - title: Tab 1
+    # Optional unique id for direct access /lovelace/${id}
+    id: tab1
+    # Optional background (overwrites the global background).
+    background: radial-gradient(crimson, skyblue)
+    # Each view can have a different theme applied. Theme should be defined in the frontend.
+    theme: dark-mode
+    # The cards to show on this view.
+    cards:
+        # The filter card will filter entities for their state
+      - type: entity-filter
+        entities:
+          - device_tracker.google_maps_114901048958323475377
+          - device_tracker.beasiphone
+        state_filter:
+          - 'home'
+        card:
+          type: glance
+          title: People that are home
+
+        # The picture entity card will represent an entity with a picture
+      - type: entities
+        entities:
+          - light.vardagsrum_hoger
+          - script.varde_ljus
+          - script.mysbelysning
+          - script.godnatt
+      - type: entities
+        entities:
+          - sensor.template_calendar_samuel
+          - sensor.template_calendar_beatrice
+          - sensor.template_calendar_john
+          - sensor.template_calendar_louise
+          - sensor.template_calendar_elsa
+          - sensor.template_calendar_gabriel
+          - sensor.template_calendar_tornberg
+        card:
+          type: glance
+          title: Kalender
+
+    # Specify a tab icon if you want the view tab to be an icon.
+  - icon: mdi:home-assistant
+    # Title of the view. Will be used as the tooltip for tab icon
+    title: Second view
+    cards:
+        # Entities card will take a list of entities and show their state.
+      - type: entities
+        # Title of the entities card
+        title: Test
+        # The entities here will be shown in the same order as specified.
+        # Each entry is an entity ID or a map with extra options.
+        entities:
+          - sensor.ssl_certificate_expiry
+#          - switch.ac
+#          - entity: light.living_room
+            # Override the name to use
+#            name: LR Lights
+
+        # The markdown card will render markdown text.
+      - type: markdown
+        title: Lovelace
+        content: >
+          Welcome to your **Lovelace UI**.

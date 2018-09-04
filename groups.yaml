@@ -16,6 +16,7 @@ braattha:
   - group.lightscripts
   - group.zwavegroup
   - group.ljus_vardagsrum
+  - group.all_lights
   name: Verktyg
 homenetwork:
   view: true

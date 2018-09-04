@@ -17,7 +17,7 @@
     exclude:
     - !secret ip_hassserver
     - !secret ip_gs108ev3
-    scan_options: " --privileged -F --host-timeout 5s"
+    # scan_options: " --privileged -F --host-timeout 5s"
     home_interval: 15
     interval_seconds: 120
     consider_home: 360
