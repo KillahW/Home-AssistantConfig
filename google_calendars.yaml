@@ -64,3 +64,10 @@
   - device_id: webcalcallagetsemikblaics
     name: webcal://cal.laget.se/MIKBla.ics
     track: true
+
+- cal_id: family01917518391661565410@group.calendar.google.com
+  entities:
+  - device_id: familjefilm
+    ignore_availability: true
+    name: Familjefilm
+    track: true

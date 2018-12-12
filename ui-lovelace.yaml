@@ -15,9 +15,9 @@ resources:
 
 views:
     # View tab title.
-  - title: Tab 1
+  - title: Start
     # Optional unique id for direct access /lovelace/${id}
-    id: tab1
+    id: star
     # Optional background (overwrites the global background).
     background: radial-gradient(crimson, skyblue)
     # Each view can have a different theme applied. Theme should be defined in the frontend.
@@ -39,6 +39,7 @@ views:
       - type: entities
         entities:
           - light.vardagsrum_hoger
+          - light.sovrum_tak
           - script.varde_ljus
           - script.mysbelysning
           - script.godnatt

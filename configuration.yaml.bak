@@ -10,16 +10,12 @@ homeassistant:
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Stockholm
-  # Customization file
+
   customize: !include customize.yaml
-  #   customize_glob: !include customize_glob.yaml
-  auth_providers:
-    - type: homeassistant
-    - type: legacy_api_password
-    - type: trusted_networks
+  customize_glob: !include customize_glob.yaml
 
 # Show links to resources in log and frontend
-introduction:
+# introduction:
 
 # Enables the frontend
 frontend:
@@ -27,13 +23,22 @@ frontend:
 # Enables configuration UI
 config:
 
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+#logger:
+#  default: info
+#  logs:
+#    requests.packages.urllib3.connectionpool: critical
+#    #for this item anything below error will not be logged
+#    py.warnings: critical
+#did not suppressed ssl warnings
+#
 http:
-  base_url: !secret ip_baseurl
-  api_password: !secret api_password
-  use_x_forwarded_for: true
-  trusted_proxies: !secret ip_trustedproxy
-  trusted_networks:
+  # Uncomment this to add a password (recommended!)
+   api_password: !secret api_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+   base_url: !secret ip_baseurl
+   use_x_forwarded_for: true
+   trusted_proxies: !secret ip_trustedproxy
+   trusted_networks:
     - 127.0.0.1
     - !secret trustednet
 
@@ -44,22 +49,32 @@ http:
 # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
 updater:
   # Optional, allows Home Assistant developers to focus on popular components.
-  include_used_components: true
+   include_used_components: true
 
 # Discover some devices automatically
-discovery:
+#discovery:
+
+# Testing stuff
+zeroconf:
+# upnp:
+  # port_mapping: true
 
 # Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
+#conversation: !include_dir_named conversations/
+conversation: !include_dir_merge_list conversations/
 
 # Enables support for tracking state changes over time
 history:
+  exclude:
+    domains:
+    - automation
+    - weblink
+    - updater
+    # entities:
+    # - group.ignoredinhistory
 
 # View all events in a logbook
 logbook:
-
-# Enables a map showing the location of tracked devices
-map:
 
 # Track the sun
 sun:
@@ -72,17 +87,6 @@ tts:
     language: sv
     time_memory: 300
 
-# Cloud
-cloud:
-  google_actions:
-    filter:
-      include_domains:
-        - switch
-        - light
-
-#group: !include groups.yaml
-#automation: !include automations.yaml
-#script: !include scripts.yaml
 
 # Includes
 scene: !include_dir_list scenes/
@@ -93,6 +97,7 @@ device_tracker: !include device_trackers.yaml
 script: !include_dir_merge_named scripts/
 media_player: !include media_players.yaml
 notify: !include notifies.yaml
+#image_processing: !include image_processing.yaml
 switch: !include switches.yaml
 zone: !include_dir_list zones/
 intent_script: !include_dir_merge_named intent_scripts/
@@ -100,6 +105,10 @@ intent_script: !include_dir_merge_named intent_scripts/
 #IFTTT
 ifttt:
   key: !secret ifttt_key
+
+# microsoft_face:
+  # api_key: !secret microsoft_face_key1
+  # azure_region: westcentralus
 
 zwave:
   usb_path: /dev/ttyS2
@@ -115,14 +124,20 @@ panel_iframe:
     title: Familjens kalender
     url: !secret googlecalendarurl
 
-#google_assistant:
-#  project_id: someproject-2d0b8
-#  client_id: !secret ga_client_id
-#  access_token: !secret ga_access_token
-#  exposed_domains:
-#    - switch
-#    - light
-#    - group
+google_assistant:
+  project_id: someproject-2d0b8
+  client_id: !secret ga_client_id
+  access_token: !secret ga_access_token
+  exposed_domains:
+    - switch
+    - light
+    - group
+
+#Enables a map showing the location of tracked devices
+map:
+
+# Cloud
+cloud:
 
 #Homekit
 homekit:

@@ -81,3 +81,7 @@
       HDMI4: "TV"
       HDMI5: "Oanvänd HDMI"
       V-AUX: "HDMI framsidan"
+    zone_ignore:
+      - "Zone_2"
+    zone_names:
+      Main_Zone: "Vardagsrum"
