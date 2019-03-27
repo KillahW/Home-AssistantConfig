@@ -32,11 +32,11 @@
 #     options: street, city
 #     api_key: !secret google_api_server_key
 
-  - platform: google_geocode
-    origin: device_tracker.beasiphone
-    name: Beatrice plats
-    picture: /local/bea.png
-    api_key: !secret google_api_server_key
+  # - platform: google_geocode
+  #   origin: device_tracker.beasiphone
+  #   name: Beatrice plats
+  #   picture: /local/bea.png
+  #   api_key: !secret google_api_server_key
 
   - platform: google_travel_time
     name: Samuel hemifrån till jobbet

@@ -1,5 +1,5 @@
-  - platform: transmission
-    host: !secret ip_transmissionhost
-    username: !secret transmission_user
-    password: !secret transmission_password
+  # - platform: transmission
+  #   host: !secret ip_transmissionhost
+  #   username: !secret transmission_user
+  #   password: !secret transmission_password
   

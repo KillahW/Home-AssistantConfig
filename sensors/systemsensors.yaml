@@ -50,12 +50,12 @@
   - platform: cert_expiry
     host: !secret ip_externalalias
 
-#Transmission
-  - platform: transmission
-    host: !secret ip_transmissionhost
-    username: !secret transmission_user
-    password: !secret transmission_password
-    monitored_variables:
-      - 'current_status'
-      - 'download_speed'
-      - 'upload_speed'
+# #Transmission
+#   - platform: transmission
+#     host: !secret ip_transmissionhost
+#     username: !secret transmission_user
+#     password: !secret transmission_password
+#     monitored_variables:
+#       - 'current_status'
+#       - 'download_speed'
+#       - 'upload_speed'

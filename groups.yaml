@@ -39,11 +39,11 @@ vmediadevices:
   - group.scrmedia
   - group.plexdevices
   name: Media
-internet:
-  view: true
-  entities:
-  - group.transmissiongroup
-  name: Internet
+# internet:
+#   view: true
+#   entities:
+#   - group.transmissiongroup
+#   name: Internet
 # overvakning:
 #   view: true
 #   entities:
@@ -55,30 +55,31 @@ tracker:
   entities:
   - device_tracker.beasiphone
   - device_tracker.google_maps_114901048958323475377
+  - group.plats
   name: Personer
   view: false
-allunits:
-  entities:
-  - device_tracker.tornberg1
-  - device_tracker.tornberg7
-  - device_tracker.martin
-  - device_tracker.winserver1
-  - device_tracker.skrivare1
-  - device_tracker.ipadair2
-  - device_tracker.xboxone
-  name: "Fasta enheter"
-  view: false
-geocodeunits:
-  entities:
-  - sensor.samuels_plats
-  - sensor.beatrice_plats
-  name: "Plats"
-  view: false
+# allunits:
+#   entities:
+#   - device_tracker.tornberg1
+#   - device_tracker.tornberg7
+#   - device_tracker.martin
+#   - device_tracker.winserver1
+#   - device_tracker.skrivare1
+#   - device_tracker.ipadair2
+#   - device_tracker.xboxone
+#   name: "Fasta enheter"
+#   view: false
+# geocodeunits:
+#   entities:
+#   - sensor.samuels_plats
+#   - sensor.beatrice_plats
+#   name: "Plats"
+#   view: false
 grmediadevices:
   view: false
   entities:
   - media_player.vardagsrum
-  - media_player.yamaha_receiver
+  - media_player.yamaha_receiver_vardagsrum
   name: Mediaenheter
 scrmedia:
   view: false
@@ -121,7 +122,7 @@ zwavegroup:
   view: false
   entities:
   - zwave.sigma_designs_uzb_zwave_usb_adapter
-  - zwave.nexadimmer
+  # - zwave.nexadimmer
   # - sensor.nexadimmer_alarm_level
   # - sensor.nexadimmer_alarm_type
   # - sensor.nexadimmer_power_management
@@ -130,7 +131,7 @@ zwavegroup:
 ljus_vardagsrum:
   view: false
   entities:
-  - light.nexadimmer_level
+  # - light.nexadimmer_level
   - light.vardagsrum_hoger
   name: Ljus i vardagsrummet
 lightscripts:
@@ -146,14 +147,14 @@ computer_stuff:
   - sensor.ssl_certificate_expiry
 #  - sensor.ilo_uptime
   name: Datorgrejer
-transmissiongroup:
-  view: false
-  entities:
-  - sensor.transmission_down_speed
-  - sensor.transmission_status
-  - sensor.transmission_up_speed
-  - switch.transmission_turtle_mode
-  name: Transmission
+# transmissiongroup:
+#   view: false
+#   entities:
+#   - sensor.transmission_down_speed
+#   - sensor.transmission_status
+#   - sensor.transmission_up_speed
+#   - switch.transmission_turtle_mode
+#   name: Transmission
 sungroup:
   view: false
   entities:
