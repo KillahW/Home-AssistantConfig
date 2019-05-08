@@ -1,11 +1,11 @@
-  # - platform: unifi
-  #   host: !secret ip_unifi
-  #   username: !secret unifi_user
-  #   password: !secret unifi_password
-  #   verify_ssl: false
-  #   interval_seconds: 30
-  #   consider_home: 180
-  #   track_new_devices: yes
+  - platform: unifi
+    host: !secret ip_unifi
+    username: !secret unifi_user
+    password: !secret unifi_password
+    verify_ssl: false
+    interval_seconds: 30
+    consider_home: 180
+    track_new_devices: no
 
   # - platform: owntracks
   #   max_gps_accuracy: 200
